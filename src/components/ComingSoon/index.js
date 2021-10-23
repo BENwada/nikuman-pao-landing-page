@@ -1,10 +1,20 @@
 import React from "react";
+import {
+  ComingSoonContainer,
+  ComingSoonH1,
+  ComingSoonImg,
+  ComingSoonLogo,
+} from "./ComingSoonElements";
+import logo from "../../images/logo.png";
+import bg from "../../images/bg.png";
 
 const ComingSoon = () => {
   return (
-    <div>
-      <h1>近日公開！</h1>
-    </div>
+    <ComingSoonContainer>
+      <ComingSoonH1>近日リリース！</ComingSoonH1>
+      <ComingSoonLogo src={logo} />
+      <ComingSoonImg src={bg} />
+    </ComingSoonContainer>
   );
 };
 
