@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import bg from "../../images/bg.png";
 
 export const ComingSoonContainer = styled.div`
   background-color: #000;
@@ -40,7 +39,6 @@ export const ComingSoonMoji = styled.img`
 export const ComingSoonImg = styled.img`
   background-color: #000;
   width: 100%;
-  margin-top: -38% ;
+  margin-top: -38%;
   margin-left: auto;
-  }
 `;
