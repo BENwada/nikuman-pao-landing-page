@@ -1,19 +1,23 @@
 import React from "react";
 import {
   ComingSoonContainer,
-  ComingSoonH1,
+  ComingSoonWrapper,
   ComingSoonImg,
+  ComingSoonMoji,
   ComingSoonLogo,
 } from "./ComingSoonElements";
-import logo from "../../images/logo.png";
+import logo from "../../images/logo.svg";
+import moji from "../../images/moji.png";
 import bg from "../../images/bg.png";
 
 const ComingSoon = () => {
   return (
     <ComingSoonContainer>
-      <ComingSoonH1>近日リリース！</ComingSoonH1>
-      <ComingSoonLogo src={logo} />
-      <ComingSoonImg src={bg} />
+      <ComingSoonWrapper>
+        <ComingSoonLogo src={logo} />
+        <ComingSoonMoji src={moji} />
+        <ComingSoonImg src={bg} />
+      </ComingSoonWrapper>
     </ComingSoonContainer>
   );
 };

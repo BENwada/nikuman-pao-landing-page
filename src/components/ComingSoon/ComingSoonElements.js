@@ -1,34 +1,46 @@
 import styled from "styled-components";
+import bg from "../../images/bg.png";
 
 export const ComingSoonContainer = styled.div`
-  justify-content: center;
-  max-width: 1100px;
-  margin: 0 auto;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+`;
+
+export const ComingSoonWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  background-color: #000;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
 `;
 
 export const ComingSoonLogo = styled.img`
-  position: absolute;
-  padding: 30px 30px;
-  width: 150px;
-  height: 150px;
+  display: flex;
+  padding-top: 20px;
+  margin: 3rem auto;
+  width: 45%;
   z-index: 3;
 `;
 
-export const ComingSoonH1 = styled.h1`
-  font-size: 48px;
-  font-weight: 600;
-  padding: 70px 0px 0px 200px;
-  display: block;
-  color: #fff;
-  z-index: 1;
-  position: absolute;
+export const ComingSoonMoji = styled.img`
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  padding: 10% 0;
+  z-index: 3;
 `;
 
 export const ComingSoonImg = styled.img`
+  background-color: #000;
   width: 100%;
-  height: 800px;
-  object-fit: none;
-  object-position: right bottom;
-  z-index: 999;
+  margin-top: -38% ;
+  margin-left: auto;
+  }
 `;
