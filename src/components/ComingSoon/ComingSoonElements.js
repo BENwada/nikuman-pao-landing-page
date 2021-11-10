@@ -39,6 +39,7 @@ export const ComingSoonMoji = styled.img`
 export const ComingSoonImg = styled.img`
   background-color: #000;
   width: 100%;
+  max-width: 1400px;
   margin-top: -38%;
   margin-left: auto;
 `;
