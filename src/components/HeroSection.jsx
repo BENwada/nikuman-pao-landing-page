@@ -6,29 +6,31 @@ import image04 from "../images/image04.png";
 import image05 from "../images/image05.png";
 import image06 from "../images/image06.png";
 import logo from "../images/logo.svg";
-import main from "../images/bg.png";
 
-const HeroContainer = styled.div`
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
   background-color: #000;
-  /* align-items: center; */
-  /* justify-content: center; */
-
-  @media screen and (max-width: 768px) {
-    height: 1100px;
-  }
-
-  @media screen and (max-width: 480px) {
-    height: 1300px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
   }
 `;
 
-const HeroWrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  height: 100%;
+  width: 100%;
   max-width: 1000px;
   align-items: center;
-  position: relative;
+`;
+
+const HeroH1 = styled.h1`
+  display: none;
 `;
 
 const HeroLogo = styled.img`
@@ -37,6 +39,11 @@ const HeroLogo = styled.img`
   margin-top: 100px;
   position: absolute;
   z-index: 99;
+
+  @media screen and (max-width: 768px) {
+    width: 180px;
+    height: 180px;
+  }
 `;
 
 const HeroBg = styled.section`
@@ -55,54 +62,18 @@ const Grid = styled.div`
 `;
 
 const Img = styled.img`
-  /* position: absolute; */
+  grid-area: img;
   vertical-align: top;
   width: 100%;
   height: 200px;
   object-fit: cover;
 `;
 
-const MainImgWrapper = styled.div`
-  /* display: flex; */
-  width: 100%;
-  /* max-width: 1000px; */
-  background-color: #000;
-  position: relative;
-`;
-
-const MainImg = styled.img`
-  vertical-align: top;
-  height: 70%;
-  margin-bottom: 0;
-  margin-right: 0px;
-  margin-left: auto;
-  z-index: 3;
-  /* position: absolute; */
-`;
-
-const HeroContent = styled.div`
-  /* display: flex; */
-  position: absolute;
-  align-items: center;
-`;
-
-const HeroH1 = styled.h1`
-  display: none;
-`;
-
-const HeroP = styled.p`
-  z-index: 100;
-  font-family: "Shippori Mincho", serif;
-  font-size: 13.5px;
-  color: #fff;
-  margin-top: 20px;
-`;
-
 const HeroSection = () => {
   return (
-    <HeroContainer>
-      <HeroH1>手づくり肉まんの店パオ</HeroH1>
-      <HeroWrapper>
+    <Container>
+      <Wrapper>
+        <HeroH1>手づくり肉まんの店パオ</HeroH1>
         <HeroLogo src={logo} />
         <HeroBg>
           <Grid>
@@ -124,20 +95,8 @@ const HeroSection = () => {
             <Img src={image06} alt="手づくりのたれ" />
           </Grid>
         </HeroBg>
-        <MainImgWrapper>
-          <HeroContent>
-            <HeroP>
-              「手づくり」にこだわって、 一つ一つ生地から手づくりしています。
-              <br />
-              素朴で体にやさしい中国の家庭の味です。
-              <br />
-              どうぞたっぷりとお楽しみください。
-            </HeroP>
-          </HeroContent>
-          <MainImg src={main} />
-        </MainImgWrapper>
-      </HeroWrapper>
-    </HeroContainer>
+      </Wrapper>
+    </Container>
   );
 };
 
