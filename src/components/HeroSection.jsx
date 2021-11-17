@@ -41,7 +41,7 @@ const HeroLogo = styled.img`
   z-index: 3;
 
   @media screen and (max-width: 768px) {
-    margin-top: 50%;
+    margin-top: 110px;
     width: 180px;
     height: 180px;
   }

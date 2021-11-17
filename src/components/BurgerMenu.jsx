@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Character from "../images/h1Bg.svg";
 import Bubble from "../images/bubble.svg";
-import { MenuData } from "../data";
+import { BurgerMenuData } from "../data";
 
 const Container = styled.div`
   width: 100vw;
@@ -183,21 +183,21 @@ const Menu = () => {
       <Wrapper>
         <MenuH1Wrapper>
           <MenuH1>
-            手づくり
+            PAO風
             <br />
-            中華まん
+            バーガー
           </MenuH1>
           <MenuCharacter src={Character} />
           <MenuP>
-            ふっくら、もちもち、
+            もちもちの生地で
             <br />
-            毎日生地から練り上げる
+            人気の中華をサンドした
             <br />
-            PAO自慢の味！
+            オリジナルバーガー
           </MenuP>
         </MenuH1Wrapper>
         <MenuContainer>
-          {MenuData.map((item, index) => {
+          {BurgerMenuData.map((item, index) => {
             return (
               <MenuContentWrapper key={index} id={item.id}>
                 <MenuContentContainer id={item.id}>
