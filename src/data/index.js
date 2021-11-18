@@ -91,7 +91,8 @@ export const MenuData = [
 export const BurgerMenuData = [
   {
     id: "8",
-    name: "チャーシューバーガー",
+    nameLine1: "チャーシュー",
+    nameLine2: "バーガー",
     price: "390",
     recommendation: "true",
     hard: "false",
@@ -102,7 +103,8 @@ export const BurgerMenuData = [
   },
   {
     id: "9",
-    name: "エビチリバーガー",
+    nameLine1: "エビチリ",
+    nameLine2: "バーガー",
     price: "390",
     recommendation: "true",
     hard: "false",
@@ -113,13 +115,14 @@ export const BurgerMenuData = [
   },
   {
     id: "10",
-    name: "酢豚バーガー",
+    nameLine1: "酢豚",
+    nameLine2: "バーガー",
     price: "390",
     recommendation: "false",
-    hard: "true",
+    hard: "false",
     image: ImageTen,
-    descriptionLine1: "黒酢でマイルドに仕上げた",
-    descriptionLine2: "豚肉が旨し！",
+    descriptionLine1: "黒酢でマイルドに仕上",
+    descriptionLine2: "げた豚肉が旨し！",
     alt: "酢豚バーガー",
   },
 ];

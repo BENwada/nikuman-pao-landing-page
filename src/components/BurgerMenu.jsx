@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Character from "../images/h1Bg.svg";
 import Bubble from "../images/bubble.svg";
 import { BurgerMenuData } from "../data";
+import Character1 from "../images/chara1.svg";
 
 const Container = styled.div`
   width: 100vw;
@@ -38,8 +39,7 @@ const MenuH1Wrapper = styled.div`
   align-items: center;
   position: relative;
   margin-top: 30px;
-  margin-bottom: 80px;
-  }
+  margin-bottom: 60px;
 `;
 
 const MenuH1 = styled.h1`
@@ -81,28 +81,31 @@ const MenuContainer = styled.div`
 const MenuContentWrapper = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 60%;
   width: 100%;
   max-width: 1000px;
   flex-direction: ${(props) => (props.id % 2 !== 0 ? "row-reverse" : "row")};
-  margin: ${(props) => (props.id % 2 !== 0 ? "0 0 0 -100px" : "0 -100px 0 0")};
+  /* margin: ${(props) =>
+    props.id % 2 !== 0 ? "0 0 0 -100px" : "0 -100px 0 0"}; */
   &:not(first-child) {
-    margin-top: -55px;
+    margin-top: -30px;
   }
 `;
 
 const MenuContentContainer = styled.div`
-  flex: 1;
+  flex: 5;
   height: 100%;
   display: flex;
   justify-content: ${(props) =>
     props.id % 2 === 0 ? "flex-end" : "flex-start"};
-  margin-top: 5em;
 `;
 
 const ContentWrapper = styled.div`
-  height: 100%;
+  height: 60%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 0 13px;
 `;
 
@@ -116,6 +119,7 @@ const MenuName = styled.h2`
   font-size: 1.2em;
   color: #f83d05;
   font-weight: normal;
+  line-height: 1.2em;
   margin-bottom: -0.3em;
 
   &::after {
@@ -123,7 +127,6 @@ const MenuName = styled.h2`
       props.hard === "true" ? "../images/hard.svg" : ""});
     vertical-align: middle;
     padding-left: 5px;
-  }
 `;
 
 const Price = styled.h3`
@@ -141,23 +144,23 @@ const Tax = styled.p`
 
 const MenuImageWrapper = styled.div`
   position: relative;
+  display: flex;
+  justify-content: ${(props) =>
+    props.id % 2 !== 0 ? "flex-end" : "flex-start"};
 `;
 
 const MenuImg = styled.img`
   width: 500px;
+  margin: 15px;
 
   @media screen and (max-width: 768px) {
     width: 300px;
+    margin: ${(props) =>
+      props.id % 2 !== 0 ? "0 0 0 -100px" : "0 -100px 0 0"};
   }
 `;
 
 const MenuRecommend = styled.div`
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  right: ${(props) => (props.id % 2 !== 0 ? "0" : "")};
-  left: ${(props) => (props.id % 2 !== 0 ? "" : "0")};
-  display: flex;
   position: absolute;
   display: ${(props) => (props.recommendation === "false" ? "none" : "0")};
 `;
@@ -169,12 +172,54 @@ const SpeechBubble = styled.img`
 
 const Speech = styled.p`
   font-family: "RocknRoll One", sans-serif;
-  font-weight: ;
+  font-weight: normal;
+  top: 0;
+  left: 0.6em;
   color: white;
   font-size: 1.08em;
-  margin-left: 0.6em;
   margin-top: 0.4em;
   position: absolute;
+`;
+
+const MenuInfo = styled.div`
+  width: 100%;
+  height: 100%;
+  margin-top: -3em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+`;
+
+const PandaCharacter = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+`;
+const CharacterImg = styled.img`
+  height: 300px;
+
+  @media screen and (max-width: 768px) {
+    height: 120px;
+  }
+`;
+
+const Info = styled.div`
+  flex: 3;
+  height: 100%;
+  padding-bottom: 3em;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 2em;
+  }
+`;
+
+const InfoText = styled.p`
+  font-family: "RocknRoll One", sans-serif;
+  text-align: center;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.7em;
+  }
 `;
 
 const Menu = () => {
@@ -199,7 +244,7 @@ const Menu = () => {
         <MenuContainer>
           {BurgerMenuData.map((item, index) => {
             return (
-              <MenuContentWrapper key={index} id={item.id}>
+              <MenuContentWrapper key={item.id} id={item.id}>
                 <MenuContentContainer id={item.id}>
                   <ContentWrapper>
                     <Description>
@@ -207,15 +252,19 @@ const Menu = () => {
                       <br />
                       {item.descriptionLine2}
                     </Description>
-                    <MenuName hard={item.hard}>{item.name}</MenuName>
+                    <MenuName hard={item.hard}>
+                      {item.nameLine1}
+                      <br />
+                      {item.nameLine2}
+                    </MenuName>
                     <Price>
                       {item.price}
                       <Tax>円（税込）</Tax>
                     </Price>
                   </ContentWrapper>
                 </MenuContentContainer>
-                <MenuImageWrapper>
-                  <MenuImg src={item.image} id={item.id} alt={item.alt} />
+                <MenuImageWrapper id={item.id}>
+                  <MenuImg src={item.image} alt={item.alt} id={item.id} />
                   <MenuRecommend
                     recommendation={item.recommendation}
                     id={item.id}
@@ -228,6 +277,14 @@ const Menu = () => {
             );
           })}
         </MenuContainer>
+        <MenuInfo>
+          <PandaCharacter>
+            <CharacterImg src={Character1} />
+          </PandaCharacter>
+          <Info>
+            <InfoText>●この他にもメニューがたくさんございます。</InfoText>
+          </Info>
+        </MenuInfo>
       </Wrapper>
     </Container>
   );

@@ -39,7 +39,6 @@ const MenuH1Wrapper = styled.div`
   position: relative;
   margin-top: 30px;
   margin-bottom: 80px;
-  }
 `;
 
 const MenuH1 = styled.h1`
@@ -81,28 +80,31 @@ const MenuContainer = styled.div`
 const MenuContentWrapper = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 60%;
   width: 100%;
   max-width: 1000px;
   flex-direction: ${(props) => (props.id % 2 !== 0 ? "row-reverse" : "row")};
-  margin: ${(props) => (props.id % 2 !== 0 ? "0 0 0 -100px" : "0 -100px 0 0")};
+  /* margin: ${(props) =>
+    props.id % 2 !== 0 ? "0 0 0 -100px" : "0 -100px 0 0"}; */
   &:not(first-child) {
     margin-top: -55px;
   }
 `;
 
 const MenuContentContainer = styled.div`
-  flex: 1;
+  flex: 5;
   height: 100%;
   display: flex;
   justify-content: ${(props) =>
     props.id % 2 === 0 ? "flex-end" : "flex-start"};
-  margin-top: 5em;
 `;
 
 const ContentWrapper = styled.div`
-  height: 100%;
+  height: 60%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 0 13px;
 `;
 
@@ -123,7 +125,6 @@ const MenuName = styled.h2`
       props.hard === "true" ? "../images/hard.svg" : ""});
     vertical-align: middle;
     padding-left: 5px;
-  }
 `;
 
 const Price = styled.h3`
@@ -141,23 +142,23 @@ const Tax = styled.p`
 
 const MenuImageWrapper = styled.div`
   position: relative;
+  display: flex;
+  justify-content: ${(props) =>
+    props.id % 2 !== 0 ? "flex-end" : "flex-start"};
 `;
 
 const MenuImg = styled.img`
   width: 500px;
+  margin: 0 15px;
 
   @media screen and (max-width: 768px) {
+    margin: ${(props) =>
+      props.id % 2 !== 0 ? "0 0 0 -100px" : "0 -100px 0 0"};
     width: 300px;
   }
 `;
 
 const MenuRecommend = styled.div`
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  right: ${(props) => (props.id % 2 !== 0 ? "0" : "")};
-  left: ${(props) => (props.id % 2 !== 0 ? "" : "0")};
-  display: flex;
   position: absolute;
   display: ${(props) => (props.recommendation === "false" ? "none" : "0")};
 `;
@@ -169,10 +170,11 @@ const SpeechBubble = styled.img`
 
 const Speech = styled.p`
   font-family: "RocknRoll One", sans-serif;
-  font-weight: ;
+  font-weight: normal;
+  top: 0;
+  left: 0.6em;
   color: white;
   font-size: 1.08em;
-  margin-left: 0.6em;
   margin-top: 0.4em;
   position: absolute;
 `;
@@ -197,9 +199,9 @@ const Menu = () => {
           </MenuP>
         </MenuH1Wrapper>
         <MenuContainer>
-          {MenuData.map((item, index) => {
+          {MenuData.map((item) => {
             return (
-              <MenuContentWrapper key={index} id={item.id}>
+              <MenuContentWrapper key={item.id} id={item.id}>
                 <MenuContentContainer id={item.id}>
                   <ContentWrapper>
                     <Description>
@@ -214,8 +216,8 @@ const Menu = () => {
                     </Price>
                   </ContentWrapper>
                 </MenuContentContainer>
-                <MenuImageWrapper>
-                  <MenuImg src={item.image} id={item.id} alt={item.alt} />
+                <MenuImageWrapper id={item.id}>
+                  <MenuImg src={item.image} alt={item.alt} id={item.id} />
                   <MenuRecommend
                     recommendation={item.recommendation}
                     id={item.id}
