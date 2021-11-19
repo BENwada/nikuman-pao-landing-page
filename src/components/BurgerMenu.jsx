@@ -156,7 +156,7 @@ const MenuImg = styled.img`
   width: 500px;
   margin: 15px;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     width: 300px;
     margin: ${(props) =>
       props.id % 2 !== 0 ? "0 0 0 -100px" : "0 -100px 0 0"};
@@ -214,7 +214,7 @@ const Info = styled.div`
   width: 100%;
   padding-bottom: 3em;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     padding-bottom: 1em;
   }
 `;
@@ -222,7 +222,7 @@ const Info = styled.div`
 const InfoText = styled.p`
   padding: 10px;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     font-size: 0.7em;
   }
 `;
