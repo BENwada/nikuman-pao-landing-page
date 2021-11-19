@@ -28,6 +28,10 @@ const CommitmentContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #f3ede7;
+
+  @media screen and (max-width: 768px) {
+    padding: 2em 1em;
+  } ;
 `;
 
 const CommitmentWrapper = styled.div`
@@ -37,7 +41,7 @@ const CommitmentWrapper = styled.div`
 `;
 
 const CommitmentH1 = styled.h1`
-  font-size: 3em;
+  font-size: 2.5em;
   color: #1e55c8;
 
   &::before {
@@ -80,6 +84,11 @@ const LeftH2 = styled.h2`
 
 const LeftCharacter = styled.img`
   width: 15em;
+
+  @media screen and (max-width: 768px) {
+    width: 45vw;
+    padding: 7px;
+  } ;
 `;
 
 const LeftDisc = styled.p`
@@ -111,6 +120,11 @@ const RightH2 = styled.h2`
 
 const RightCharacter = styled.img`
   width: 15em;
+
+  @media screen and (max-width: 768px) {
+    width: 45vw;
+    padding: 7px;
+  } ;
 `;
 
 const RightDisc = styled.p`

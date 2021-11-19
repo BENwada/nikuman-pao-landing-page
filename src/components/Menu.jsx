@@ -42,12 +42,11 @@ const MenuH1Wrapper = styled.div`
 `;
 
 const MenuH1 = styled.h1`
-  font-family: "RocknRoll One", sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
   text-align: center;
   color: #fff;
   font-weight: normal;
-  margin-top: 2em;
+  margin-top: 1.6em;
   line-height: 1.3em;
   position: absolute;
 `;
@@ -60,7 +59,6 @@ const MenuCharacter = styled.img`
 `;
 
 const MenuP = styled.p`
-  font-family: "RocknRoll One", sans-serif;
   font-weight: normal;
   margin-top: 20px;
   font-size: 0.9em;
@@ -88,7 +86,7 @@ const MenuContentWrapper = styled.div`
   /* margin: ${(props) =>
     props.id % 2 !== 0 ? "0 0 0 -100px" : "0 -100px 0 0"}; */
   &:not(first-child) {
-    margin-top: -55px;
+    margin-top: -40px;
   }
 `;
 
@@ -114,7 +112,6 @@ const Description = styled.p`
 `;
 
 const MenuName = styled.h2`
-  font-family: "RocknRoll One", sans-serif;
   font-size: 1.2em;
   color: #f83d05;
   font-weight: normal;
@@ -128,7 +125,6 @@ const MenuName = styled.h2`
 `;
 
 const Price = styled.h3`
-  font-family: "RocknRoll One", sans-serif;
   display: flex;
   align-items: baseline;
   font-weight: normal;
@@ -136,7 +132,6 @@ const Price = styled.h3`
 `;
 
 const Tax = styled.p`
-  font-family: "RocknRoll One", sans-serif;
   font-size: 0.6em;
 `;
 
@@ -169,7 +164,6 @@ const SpeechBubble = styled.img`
 `;
 
 const Speech = styled.p`
-  font-family: "RocknRoll One", sans-serif;
   font-weight: normal;
   top: 0;
   left: 0.6em;

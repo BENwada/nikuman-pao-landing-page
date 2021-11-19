@@ -4,6 +4,7 @@ import Menu from "../components/Menu";
 import BurgerMenu from "../components/BurgerMenu";
 import Commitment from "../components/Commitment";
 import InfoSection from "../components/InfoSection";
+import Access from "../components/Access";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <BurgerMenu />
       <Commitment />
       <InfoSection />
+      <Access />
     </>
   );
 };
