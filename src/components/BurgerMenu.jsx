@@ -24,7 +24,7 @@ const Wrapper = styled.div`
   overflow: hidden;
   font-size: 23px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     font-size: 17px;
   }
 `;
@@ -54,7 +54,7 @@ const MenuH1 = styled.h1`
 
 const MenuCharacter = styled.img`
   height: 6em;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     height: 100px;
   }
 `;
@@ -117,12 +117,6 @@ const MenuName = styled.h2`
   font-weight: normal;
   line-height: 1.2em;
   margin-bottom: -0.3em;
-
-  &::after {
-    content: url(${(props) => props.hard === "on" && "../images/hard.svg"});
-    vertical-align: middle;
-    padding-left: 5px;
-  }
 `;
 
 const Price = styled.h3`
@@ -147,7 +141,7 @@ const MenuImg = styled.img`
   width: 500px;
   margin: 15px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     width: 300px;
     margin: ${(props) =>
       props.id % 2 !== 0 ? "0 0 0 -100px" : "0 -100px 0 0"};
@@ -191,7 +185,7 @@ const PandaCharacter = styled.div`
 const CharacterImg = styled.img`
   height: 300px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     height: 120px;
   }
 `;
@@ -201,7 +195,7 @@ const Info = styled.div`
   height: 100%;
   padding-bottom: 3em;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     padding-bottom: 2em;
   }
 `;
@@ -209,7 +203,7 @@ const Info = styled.div`
 const InfoText = styled.p`
   text-align: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     font-size: 0.7em;
   }
 `;

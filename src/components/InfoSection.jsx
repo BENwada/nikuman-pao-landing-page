@@ -15,7 +15,7 @@ const Container = styled.div`
   align-items: center;
   background-color: #000;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     font-size: 9px;
   } ;
 `;
@@ -30,7 +30,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     padding: 0px;
   } ;
 `;
@@ -45,7 +45,7 @@ const Images = styled.div`
   align-items: center;
   object-fit: cover;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     width: 80%;
     padding: 10px;
   } ;
@@ -56,7 +56,7 @@ const Image = styled.img`
   width: 500px;
   padding: 10px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     width: 45vw;
     padding: 5px;
   } ;
