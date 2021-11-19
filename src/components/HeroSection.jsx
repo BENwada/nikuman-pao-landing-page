@@ -16,7 +16,6 @@ const Container = styled.div`
   background-color: #000;
   height: 100%;
   width: 100vw;
-  }
 `;
 
 const BgWrapper = styled.div`
