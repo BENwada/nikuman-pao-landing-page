@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import thaShu from "../images/tha-shu.jpg";
-import shumai from "../images/shumai.jpg";
-import maBo from "../images/ma-bo.jpg";
-import ebichiri from "../images/ebichiri.jpg";
+import thaShu from "../images/tha-shu.png";
+import shumai from "../images/shumai.png";
+import maBo from "../images/ma-bo.png";
+import ebichiri from "../images/ebichiri.png";
 
 const Container = styled.div`
   width: 100vw;
@@ -31,35 +31,42 @@ const Wrapper = styled.div`
   align-items: center;
 
   @media screen and (max-width: 480px) {
-    padding: 0px;
+    padding: 10px;
   } ;
 `;
 
 const Images = styled.div`
   width: 100%;
   height: 100%;
-  max-width: 1000px;
   display: flex;
-  margin: 10px;
+  padding: 5px;
   justify-content: center;
   align-items: center;
-  object-fit: cover;
+  flex-wrap: wrap;
+  row-gap: 1em;
+  column-gap: 1em;
 
   @media screen and (max-width: 480px) {
-    width: 80%;
-    padding: 10px;
-  } ;
+    padding: 5px;
+  }
+
+  @media screen and (max-width: 370px) {
+    flex-direction: column;
+  }
 `;
 
 const Image = styled.img`
+  width: 49%;
   height: 100%;
-  width: 500px;
-  padding: 10px;
+  height: 100%auto;
+  object-fit: cover;
 
   @media screen and (max-width: 480px) {
-    width: 45vw;
-    padding: 5px;
-  } ;
+    width: 40vw;
+  }
+  @media screen and (max-width: 370px) {
+    width: 80vw;
+  }
 `;
 
 const Contents = styled.div`

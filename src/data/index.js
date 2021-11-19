@@ -35,6 +35,7 @@ export const MenuData = [
   {
     id: "3",
     name: "麻辣まん",
+    ruby: "マーラー",
     price: "280",
     recommendation: "off",
     hard: "on",

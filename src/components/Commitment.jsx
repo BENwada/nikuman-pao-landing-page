@@ -13,8 +13,8 @@ const Container = styled.div`
   background-color: #000;
   align-items: center;
 
-  @media screen and (max-width: 768px) {
-    font-size: 11px;
+  @media screen and (max-width: 480px) {
+    font-size: 10px;
   }
 `;
 
@@ -29,7 +29,7 @@ const CommitmentContainer = styled.div`
   align-items: center;
   background-color: #f3ede7;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     padding: 2em 1em;
   } ;
 `;
@@ -38,6 +38,10 @@ const CommitmentWrapper = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
+
+  @media screen and (max-width: 370px) {
+    flex-direction: column;
+  }
 `;
 
 const CommitmentH1 = styled.h1`
@@ -78,17 +82,21 @@ const LeftH2 = styled.h2`
   font-size: 2em;
   text-align: center;
   position: absolute;
-  top: 2em;
+  top: 18%;
   line-height: 1.5em;
 `;
 
 const LeftCharacter = styled.img`
   width: 15em;
 
-  @media screen and (max-width: 768px) {
-    width: 45vw;
+  @media screen and (max-width: 480px) {
+    width: 40vw;
     padding: 7px;
-  } ;
+  }
+
+  @media screen and (max-width: 370px) {
+    width: 48vw;
+  }
 `;
 
 const LeftDisc = styled.p`
@@ -97,7 +105,7 @@ const LeftDisc = styled.p`
   font-size: 1.3em;
   line-height: 2em;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     margin-top: 1em;
     line-height: 2em;
   } ;
@@ -120,17 +128,21 @@ const RightH2 = styled.h2`
   font-size: 2em;
   text-align: center;
   position: absolute;
-  top: 2em;
+  top: 18%;
   line-height: 1.5em;
 `;
 
 const RightCharacter = styled.img`
   width: 15em;
 
-  @media screen and (max-width: 768px) {
-    width: 45vw;
+  @media screen and (max-width: 480px) {
+    width: 40vw;
     padding: 7px;
-  } ;
+  }
+
+  @media screen and (max-width: 370px) {
+    width: 48vw;
+  }
 `;
 
 const RightDisc = styled.p`
@@ -139,7 +151,7 @@ const RightDisc = styled.p`
   font-size: 1.3em;
   line-height: 2em;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     margin-top: 1em;
     line-height: 2em;
   } ;

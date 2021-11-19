@@ -40,6 +40,10 @@ const MenuH1Wrapper = styled.div`
   position: relative;
   margin-top: 30px;
   margin-bottom: 60px;
+
+  @media screen and (max-width: 370px) {
+    margin-bottom: 10px;
+  }
 `;
 
 const MenuH1 = styled.h1`
@@ -87,6 +91,17 @@ const MenuContentWrapper = styled.div`
 
   &:not(first-child) {
     margin-top: -20px;
+  }
+  @media screen and (max-width: 370px) {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    &:not(first-child) {
+      margin-top: 0px;
+      margin-bottom: 30px;
+    }
   }
 `;
 
@@ -146,6 +161,9 @@ const MenuImg = styled.img`
     margin: ${(props) =>
       props.id % 2 !== 0 ? "0 0 0 -100px" : "0 -100px 0 0"};
   }
+  @media screen and (max-width: 370px) {
+    margin: 0 auto;
+  }
 `;
 
 const MenuRecommend = styled.div`
@@ -171,7 +189,7 @@ const Speech = styled.p`
 const MenuInfo = styled.div`
   width: 100%;
   height: 100%;
-  margin-top: -3em;
+  margin-top: -1em;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -193,15 +211,16 @@ const CharacterImg = styled.img`
 const Info = styled.div`
   flex: 3;
   height: 100%;
+  width: 100%;
   padding-bottom: 3em;
 
   @media screen and (max-width: 480px) {
-    padding-bottom: 2em;
+    padding-bottom: 1em;
   }
 `;
 
 const InfoText = styled.p`
-  text-align: center;
+  padding: 10px;
 
   @media screen and (max-width: 480px) {
     font-size: 0.7em;

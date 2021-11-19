@@ -61,7 +61,7 @@ const Access = () => {
           <br />
           お待ちしております。
         </MapDesc>
-        <Map href="https://goo.gl/maps/FZ5DdwrTZpsqmRfW9" target="_blank">
+        <Map href="https://goo.gl/maps/7pWxxpaexZzhgCKT6" target="_blank">
           <MapImage src={MapImageP} />
         </Map>
       </Wrapper>

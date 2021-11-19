@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   overflow: hidden;
   font-size: 23px;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     font-size: 17px;
   }
 `;
@@ -39,6 +39,10 @@ const MenuH1Wrapper = styled.div`
   position: relative;
   margin-top: 30px;
   margin-bottom: 80px;
+
+  @media screen and (max-width: 370px) {
+    margin-bottom: 10px;
+  }
 `;
 
 const MenuH1 = styled.h1`
@@ -53,7 +57,7 @@ const MenuH1 = styled.h1`
 
 const MenuCharacter = styled.img`
   height: 6em;
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     height: 100px;
   }
 `;
@@ -87,6 +91,17 @@ const MenuContentWrapper = styled.div`
   &:not(first-child) {
     margin-top: -40px;
   }
+  @media screen and (max-width: 370px) {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    &:not(first-child) {
+      margin-top: 0px;
+      margin-bottom: 30px;
+    }
+  }
 `;
 
 const MenuContentContainer = styled.div`
@@ -114,14 +129,22 @@ const MenuName = styled.h2`
   font-size: 1.2em;
   color: #f83d05;
   font-weight: normal;
-  margin-bottom: -0.3em;
+  line-height: 1.2em;
+  margin-top: 0.3em;
+  position: relative;
 
-  /* &::after {
-    content: url(${(props) =>
-    props.hard === "on" ? "../images/hard.svg" : ""});
+  &::after {
+    content: url(${(props) => props.hard === "on" && "../images/hard.svg"});
+    display: ${(props) => props.hard === "off" && "none"};
     vertical-align: middle;
-    padding-left: 5px;
-  } */
+    padding-left: 3px;
+  }
+`;
+
+const Ruby = styled.p`
+  position: absolute;
+  top: -1.7em;
+  font-size: 0.4em;
 `;
 
 const Price = styled.h3`
@@ -146,10 +169,14 @@ const MenuImg = styled.img`
   width: 500px;
   margin: 0 15px;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     margin: ${(props) =>
       props.id % 2 !== 0 ? "0 0 0 -100px" : "0 -100px 0 0"};
     width: 300px;
+  }
+
+  @media screen and (max-width: 370px) {
+    margin: 0 auto;
   }
 `;
 
@@ -204,6 +231,7 @@ const Menu = () => {
                       {item.descriptionLine2}
                     </Description>
                     <MenuName key={item.id} hard={item.hard}>
+                      <Ruby>{item.ruby}</Ruby>
                       {item.name}
                     </MenuName>
                     <Price key={item.id}>

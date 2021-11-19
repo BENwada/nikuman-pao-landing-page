@@ -81,10 +81,16 @@ const MainWrapper = styled.div`
 
 const HeroContent = styled.div`
   margin: auto;
-  left: 0;
-  right: 0;
-  position: absolute;
-  z-index: 3;
+  height: 400px;
+  width: 100%;
+  background-image: url(${main});
+  background-size: contain;
+  background-position: right 0 bottom 0%;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: 768px) {
+    height: 300px;
+  }
 `;
 
 const HeroP = styled.p`
@@ -100,22 +106,6 @@ const HeroP = styled.p`
     font-size: 13.5px;
     line-height: 1.8rem;
   }
-`;
-
-const MainImgWrapper = styled.div`
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  background-color: #000;
-`;
-
-const MainImg = styled.img`
-  object-fit: cover;
-  /* position: absolute; */
-  height: 100%;
-  width: 60%;
-  vertical-align: top;
 `;
 
 const HeroSection = () => {
@@ -156,9 +146,6 @@ const HeroSection = () => {
             どうぞたっぷりとお楽しみください。
           </HeroP>
         </HeroContent>
-        <MainImgWrapper>
-          <MainImg src={main} />
-        </MainImgWrapper>
       </MainWrapper>
     </Container>
   );
