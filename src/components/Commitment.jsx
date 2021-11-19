@@ -22,7 +22,7 @@ const CommitmentContainer = styled.div`
   width: 100%;
   height: 100%;
   max-width: 1000px;
-  padding: 3em;
+  padding: 4em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -93,8 +93,14 @@ const LeftCharacter = styled.img`
 
 const LeftDisc = styled.p`
   text-align: center;
-  margin-top: 1em;
+  margin-top: 1.2em;
+  font-size: 1.3em;
   line-height: 2em;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 1em;
+    line-height: 2em;
+  } ;
 `;
 
 const Right = styled.div`
@@ -129,8 +135,14 @@ const RightCharacter = styled.img`
 
 const RightDisc = styled.p`
   text-align: center;
-  margin-top: 1em;
+  margin-top: 1.2em;
+  font-size: 1.3em;
   line-height: 2em;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 1em;
+    line-height: 2em;
+  } ;
 `;
 
 const InfoSection = () => {

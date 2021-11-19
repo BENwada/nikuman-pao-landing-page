@@ -83,8 +83,7 @@ const MenuContentWrapper = styled.div`
   width: 100%;
   max-width: 1000px;
   flex-direction: ${(props) => (props.id % 2 !== 0 ? "row-reverse" : "row")};
-  /* margin: ${(props) =>
-    props.id % 2 !== 0 ? "0 0 0 -100px" : "0 -100px 0 0"}; */
+
   &:not(first-child) {
     margin-top: -40px;
   }
@@ -118,10 +117,10 @@ const MenuName = styled.h2`
   margin-bottom: -0.3em;
 
   &::after {
-    content: url(${(props) =>
-      props.hard === "true" ? "../images/hard.svg" : ""});
+    content: url(${(props) => props.hard === "on" && "../images/hard.svg"});
     vertical-align: middle;
     padding-left: 5px;
+  }
 `;
 
 const Price = styled.h3`
@@ -155,7 +154,7 @@ const MenuImg = styled.img`
 
 const MenuRecommend = styled.div`
   position: absolute;
-  display: ${(props) => (props.recommendation === "false" ? "none" : "0")};
+  display: ${(props) => props.recommendation === "off" && "none"};
 `;
 
 const SpeechBubble = styled.img`
@@ -203,14 +202,16 @@ const Menu = () => {
                       <br />
                       {item.descriptionLine2}
                     </Description>
-                    <MenuName hard={item.hard}>{item.name}</MenuName>
-                    <Price>
+                    <MenuName key={item.id} hard={item.hard}>
+                      {item.name}
+                    </MenuName>
+                    <Price key={item.id}>
                       {item.price}
                       <Tax>円（税込）</Tax>
                     </Price>
                   </ContentWrapper>
                 </MenuContentContainer>
-                <MenuImageWrapper id={item.id}>
+                <MenuImageWrapper key={item.id} id={item.id}>
                   <MenuImg src={item.image} alt={item.alt} id={item.id} />
                   <MenuRecommend
                     recommendation={item.recommendation}

@@ -84,8 +84,7 @@ const MenuContentWrapper = styled.div`
   width: 100%;
   max-width: 1000px;
   flex-direction: ${(props) => (props.id % 2 !== 0 ? "row-reverse" : "row")};
-  /* margin: ${(props) =>
-    props.id % 2 !== 0 ? "0 0 0 -100px" : "0 -100px 0 0"}; */
+
   &:not(first-child) {
     margin-top: -20px;
   }
@@ -120,10 +119,10 @@ const MenuName = styled.h2`
   margin-bottom: -0.3em;
 
   &::after {
-    content: url(${(props) =>
-      props.hard === "true" ? "../images/hard.svg" : ""});
+    content: url(${(props) => props.hard === "on" && "../images/hard.svg"});
     vertical-align: middle;
     padding-left: 5px;
+  }
 `;
 
 const Price = styled.h3`
@@ -157,7 +156,7 @@ const MenuImg = styled.img`
 
 const MenuRecommend = styled.div`
   position: absolute;
-  display: ${(props) => (props.recommendation === "false" ? "none" : "0")};
+  display: ${(props) => (props.recommendation === "off" ? "none" : "0")};
 `;
 
 const SpeechBubble = styled.img`
@@ -238,14 +237,14 @@ const Menu = () => {
           {BurgerMenuData.map((item, index) => {
             return (
               <MenuContentWrapper key={item.id} id={item.id}>
-                <MenuContentContainer id={item.id}>
+                <MenuContentContainer key={item.id} id={item.id}>
                   <ContentWrapper>
                     <Description>
                       {item.descriptionLine1}
                       <br />
                       {item.descriptionLine2}
                     </Description>
-                    <MenuName hard={item.hard}>
+                    <MenuName key={item.id} hard={item.hard}>
                       {item.nameLine1}
                       <br />
                       {item.nameLine2}
@@ -256,9 +255,10 @@ const Menu = () => {
                     </Price>
                   </ContentWrapper>
                 </MenuContentContainer>
-                <MenuImageWrapper id={item.id}>
+                <MenuImageWrapper key={item.id} id={item.id}>
                   <MenuImg src={item.image} alt={item.alt} id={item.id} />
                   <MenuRecommend
+                    key={item.id}
                     recommendation={item.recommendation}
                     id={item.id}
                   >
