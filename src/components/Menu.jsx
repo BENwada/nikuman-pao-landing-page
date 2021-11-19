@@ -118,6 +118,7 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 0 13px;
+  position: relative;
 `;
 
 const Description = styled.p`
@@ -131,20 +132,21 @@ const MenuName = styled.h2`
   font-weight: normal;
   line-height: 1.2em;
   margin-top: 0.3em;
-  position: relative;
 
   &::after {
     content: url(${(props) => props.hard === "on" && "../images/hard.svg"});
     display: ${(props) => props.hard === "off" && "none"};
     vertical-align: middle;
-    padding-left: 3px;
+    top: auto;
+    bottom: auto;
+    position: absolute;
+    padding-left: 5px;
   }
 `;
 
 const Ruby = styled.p`
-  position: absolute;
-  top: -1.7em;
   font-size: 0.4em;
+  line-height: 100%;
 `;
 
 const Price = styled.h3`
