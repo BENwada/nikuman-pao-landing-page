@@ -110,8 +110,8 @@ export const BurgerMenuData = [
     recommendation: "on",
     hard: "off",
     image: ImageNine,
-    descriptionLine1: "プリバーガーエビを",
-    descriptionLine2: "甘辛ダレで。",
+    descriptionLine1: "プリップリの",
+    descriptionLine2: "エビを甘辛ダレで。",
     alt: "エビチリバーガー",
   },
   {
