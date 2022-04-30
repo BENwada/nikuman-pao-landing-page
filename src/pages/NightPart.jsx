@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 
 const NoContent = styled.div`
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   background: #000;
 `;
 
 const NcWrapper = styled.div`
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   max-width: 1080px;
   display: flex;
