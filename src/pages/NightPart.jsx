@@ -2,7 +2,6 @@ import React from "react";
 import NightPao from "../images/paonight.png";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const NoContent = styled.div`
   width: 100vw;
