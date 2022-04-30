@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const NoContent = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: #000;
 `;
 
