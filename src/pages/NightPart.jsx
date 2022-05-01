@@ -11,7 +11,6 @@ const NoContent = styled.div`
 
 const NcWrapper = styled.div`
   width: 100%;
-  height: 100%;
   margin: 0 auto;
   max-width: 1080px;
   display: flex;
