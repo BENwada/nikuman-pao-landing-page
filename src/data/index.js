@@ -13,7 +13,7 @@ export const MenuData = [
   {
     id: "1",
     name: "肉まん",
-    price: "280",
+    price: "290",
     recommendation: "on",
     hard: "off",
     image: ImageOne,
@@ -36,7 +36,7 @@ export const MenuData = [
     id: "3",
     name: "麻辣まん",
     ruby: "マーラー",
-    price: "280",
+    price: "290",
     recommendation: "off",
     hard: "on",
     image: ImageThree,
@@ -47,7 +47,7 @@ export const MenuData = [
   {
     id: "4",
     name: "玉ねぎまん",
-    price: "280",
+    price: "290",
     recommendation: "off",
     hard: "off",
     image: ImageFour,
@@ -58,7 +58,7 @@ export const MenuData = [
   {
     id: "5",
     name: "切り干し大根まん",
-    price: "280",
+    price: "290",
     recommendation: "off",
     hard: "off",
     image: ImageFive,
@@ -69,7 +69,7 @@ export const MenuData = [
   {
     id: "6",
     name: "ソーセージまん",
-    price: "280",
+    price: "290",
     recommendation: "off",
     hard: "off",
     image: ImageSix,
@@ -80,12 +80,12 @@ export const MenuData = [
   {
     id: "7",
     name: "あんまん",
-    price: "280",
+    price: "290",
     recommendation: "off",
     hard: "off",
     image: ImageSeven,
-    descriptionLine1: "紫イモの生地で練ごま入りの",
-    descriptionLine2: "あんこをサンド。",
+    descriptionLine1: "あんこは練ごま入りで",
+    descriptionLine2: "程よい甘さ♫",
     alt: "あんまん",
   },
 ];
