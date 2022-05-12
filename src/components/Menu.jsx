@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Character from "../images/h1Bg.svg";
 import Bubble from "../images/bubble.svg";
 import { MenuData } from "../data";
+import Character1 from "../images/chara1.svg";
 
 const Container = styled.div`
   width: 100vw;
@@ -202,6 +203,47 @@ const Speech = styled.p`
   position: absolute;
 `;
 
+const MenuInfo = styled.div`
+  width: 100%;
+  height: 100%;
+  margin-top: -1em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+`;
+
+const PandaCharacter = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+`;
+const CharacterImg = styled.img`
+  height: 300px;
+
+  @media screen and (max-width: 480px) {
+    height: 120px;
+  }
+`;
+
+const Info = styled.div`
+  flex: 3;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 3em;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 1em;
+  }
+`;
+
+const InfoText = styled.p`
+  padding: 10px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.7em;
+  }
+`;
+
 const Menu = () => {
   return (
     <Container>
@@ -256,6 +298,14 @@ const Menu = () => {
             );
           })}
         </MenuContainer>
+        <MenuInfo>
+          <PandaCharacter>
+            <CharacterImg src={Character1} />
+          </PandaCharacter>
+          <Info>
+            <InfoText>●この他にもメニューがたくさんございます。</InfoText>
+          </Info>
+        </MenuInfo>
       </Wrapper>
     </Container>
   );

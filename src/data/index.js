@@ -88,6 +88,17 @@ export const MenuData = [
     descriptionLine2: "程よい甘さ♫",
     alt: "あんまん",
   },
+  {
+    id: "8",
+    name: "チャーシューバーガー",
+    price: "390",
+    recommendation: "on",
+    hard: "off",
+    image: ImageEight,
+    descriptionLine1: "厚切り焼豚が",
+    descriptionLine2: "食べ応え抜群！",
+    alt: "チャーシューバーガー",
+  },
 ];
 export const BurgerMenuData = [
   {
