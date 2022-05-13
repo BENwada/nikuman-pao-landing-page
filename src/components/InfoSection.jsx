@@ -23,6 +23,7 @@ const Wrapper = styled.div`
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    padding-bottom: 30px;
   }
 `;
 
@@ -30,7 +31,6 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
   padding: 40px;
 `;
 
@@ -53,7 +53,7 @@ const Description = styled.p`
 const InfoButton = styled.button`
   font-size: 18px;
   cursor: pointer;
-  width: 200px;
+  width: 300px;
   padding: 10px;
   background-color: #a90606;
   border: none;
@@ -76,6 +76,7 @@ const InfoLink = styled(Link)`
 const Right = styled.div`
   display: flex;
   align-items: center;
+  width: 100%;
 `;
 
 const InfoImg = styled.img`
@@ -88,7 +89,10 @@ const InfoSection = () => {
       <Wrapper>
         <Left>
           <Title>
-            夜の営業は<span>「ほろ酔いパオ」</span> に変身！
+            夜の営業は
+            <br />
+            <span>ほろ酔いパオ</span>
+            <br /> に変身！
           </Title>
           <Description>
             パオ特製の一品料理を中心に、自家製麺を使った麺料理やお酒を提供します。

@@ -8,6 +8,9 @@ import ImageSeven from "../images/anko.png";
 import ImageEight from "../images/roastedPorkFillet.png";
 import ImageNine from "../images/ShrimpChili.png";
 import ImageTen from "../images/SweetAndSourPork.png";
+import ImageEleven from "../images/ebiabokadoba-ga-.png";
+import ImageTwelve from "../images/koumitoriba-ga-.png";
+import ImageThirteen from "../images/tamagoba-ga-.png";
 
 export const MenuData = [
   {
@@ -90,7 +93,8 @@ export const MenuData = [
   },
   {
     id: "8",
-    name: "チャーシューバーガー",
+    nameLine1: "チャーシュー",
+    nameLine2: "バーガー",
     price: "390",
     recommendation: "on",
     hard: "off",
@@ -100,6 +104,7 @@ export const MenuData = [
     alt: "チャーシューバーガー",
   },
 ];
+
 export const BurgerMenuData = [
   {
     id: "8",
@@ -136,5 +141,43 @@ export const BurgerMenuData = [
     descriptionLine1: "黒酢でマイルドに仕上",
     descriptionLine2: "げた豚肉が旨し！",
     alt: "酢豚バーガー",
+  },
+];
+export const ExclusiveMenuData = [
+  {
+    id: "11",
+    nameLine1: "海老アボカド",
+    nameLine2: "バーガー",
+    price: "430",
+    recommendation: "off",
+    hard: "off",
+    image: ImageEleven,
+    descriptionLine1: "特製マヨで",
+    descriptionLine2: "ヘルシーに！",
+    alt: "海老アボカドバーガー",
+  },
+  {
+    id: "12",
+    nameLine1: "香味とり",
+    nameLine2: "バーガー",
+    price: "390",
+    recommendation: "off",
+    hard: "on",
+    image: ImageTwelve,
+    descriptionLine1: "よだれ鶏が",
+    descriptionLine2: "ピリ辛旨い！",
+    alt: "香味とりバーガー",
+  },
+  {
+    id: "13",
+    nameLine1: "たまご",
+    nameLine2: "バーガー",
+    price: "290",
+    recommendation: "off",
+    hard: "off",
+    image: ImageThirteen,
+    descriptionLine1: "卵と生地の",
+    descriptionLine2: "相性バツグン！",
+    alt: "たまごバーガー",
   },
 ];

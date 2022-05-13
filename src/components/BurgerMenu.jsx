@@ -153,7 +153,7 @@ const MenuImageWrapper = styled.div`
 `;
 
 const MenuImg = styled.img`
-  width: 500px;
+  width: 800px;
   margin: 15px;
 
   @media screen and (max-width: 768px) {

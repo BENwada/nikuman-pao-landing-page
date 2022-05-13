@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import Character from "../images/h1Bg.svg";
 import Bubble from "../images/bubble.svg";
-import { MenuData } from "../data";
-import Character1 from "../images/chara1.svg";
+import { ExclusiveMenuData } from "../data";
 
 const Container = styled.div`
   width: 100vw;
@@ -20,11 +19,12 @@ const Wrapper = styled.div`
   margin: 0 auto;
   flex-direction: column;
   justify-content: center;
-  background-color: #fff;
+  background-color: #c5ecfd;
   overflow: hidden;
   font-size: 23px;
+  padding: 40px 0 0 0;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     font-size: 17px;
   }
 `;
@@ -38,8 +38,7 @@ const MenuH1Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin-top: 30px;
-  margin-bottom: 80px;
+  margin-bottom: 10px;
 
   @media screen and (max-width: 370px) {
     margin-bottom: 10px;
@@ -58,7 +57,7 @@ const MenuH1 = styled.h1`
 
 const MenuCharacter = styled.img`
   height: 6em;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     height: 100px;
   }
 `;
@@ -78,6 +77,7 @@ const MenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px 0;
 `;
 
 const MenuContentWrapper = styled.div`
@@ -90,7 +90,7 @@ const MenuContentWrapper = styled.div`
   flex-direction: ${(props) => (props.id % 2 !== 0 ? "row-reverse" : "row")};
 
   &:not(first-child) {
-    margin-top: -40px;
+    margin-top: -20px;
   }
   @media screen and (max-width: 370px) {
     display: flex;
@@ -118,7 +118,6 @@ const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 13px;
   position: relative;
 `;
 
@@ -132,22 +131,17 @@ const MenuName = styled.h2`
   color: #f83d05;
   font-weight: normal;
   line-height: 1.2em;
-  margin-top: 0.3em;
+  margin-bottom: -0.3em;
 
   &::after {
     content: url(${(props) => props.hard === "on" && "../images/hard.svg"});
     display: ${(props) => props.hard === "off" && "none"};
     vertical-align: middle;
-    top: auto;
+    top: 40px;
     bottom: auto;
     position: absolute;
     padding-left: 5px;
   }
-`;
-
-const Ruby = styled.p`
-  font-size: 0.4em;
-  line-height: 100%;
 `;
 
 const Price = styled.h3`
@@ -169,15 +163,13 @@ const MenuImageWrapper = styled.div`
 `;
 
 const MenuImg = styled.img`
-  width: 500px;
-  margin: 0 15px;
+  width: 650px;
+  margin: ${(props) => (props.id % 2 !== 0 ? "0 0 0 -100px" : "0 -100px 0 0")};
 
   @media screen and (max-width: 768px) {
-    margin: ${(props) =>
-      props.id % 2 !== 0 ? "0 0 0 -100px" : "0 -100px 0 0"};
     width: 300px;
+    margin: ${(props) => (props.id % 2 !== 0 ? "0 0 0 -80px" : "0 -80px 0 0")};
   }
-
   @media screen and (max-width: 370px) {
     margin: 0 auto;
   }
@@ -185,7 +177,7 @@ const MenuImg = styled.img`
 
 const MenuRecommend = styled.div`
   position: absolute;
-  display: ${(props) => props.recommendation === "off" && "none"};
+  display: ${(props) => (props.recommendation === "off" ? "none" : "0")};
 `;
 
 const SpeechBubble = styled.img`
@@ -203,71 +195,30 @@ const Speech = styled.p`
   position: absolute;
 `;
 
-const MenuInfo = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  background-color: white;
-`;
-
-const PandaCharacter = styled.div`
-  flex: 1;
-  display: flex;
-  justify-content: flex-start;
-`;
-const CharacterImg = styled.img`
-  height: 300px;
-
-  @media screen and (max-width: 480px) {
-    height: 120px;
-  }
-`;
-
-const Info = styled.div`
-  flex: 3;
-  height: 100%;
-  width: 100%;
-  padding-bottom: 3em;
-
-  @media screen and (max-width: 768px) {
-    padding-bottom: 1em;
-  }
-`;
-
-const InfoText = styled.p`
-  padding: 10px;
-
-  @media screen and (max-width: 768px) {
-    font-size: 0.7em;
-  }
-`;
-
-const Menu = () => {
+const Exclusive = () => {
   return (
     <Container>
       <Wrapper>
         <MenuH1Wrapper>
           <MenuH1>
-            手づくり
+            夏限定
             <br />
-            中華まん
+            バーガー
           </MenuH1>
           <MenuCharacter src={Character} />
           <MenuP>
-            ふっくら、もちもち、
+            期間限定の具材を
             <br />
-            毎日生地から練り上げる
+            特製のもちもち生地でサンドした
             <br />
-            PAO自慢の味！
+            夏限定メニュー！
           </MenuP>
         </MenuH1Wrapper>
         <MenuContainer>
-          {MenuData.map((item) => {
+          {ExclusiveMenuData.map((item, index) => {
             return (
               <MenuContentWrapper key={item.id} id={item.id}>
-                <MenuContentContainer id={item.id}>
+                <MenuContentContainer key={item.id} id={item.id}>
                   <ContentWrapper>
                     <Description>
                       {item.descriptionLine1}
@@ -275,13 +226,11 @@ const Menu = () => {
                       {item.descriptionLine2}
                     </Description>
                     <MenuName key={item.id} hard={item.hard}>
-                      <Ruby>{item.ruby}</Ruby>
-                      {item.name}
                       {item.nameLine1}
                       <br />
                       {item.nameLine2}
                     </MenuName>
-                    <Price key={item.id}>
+                    <Price>
                       {item.price}
                       <Tax>円（税込）</Tax>
                     </Price>
@@ -290,6 +239,7 @@ const Menu = () => {
                 <MenuImageWrapper key={item.id} id={item.id}>
                   <MenuImg src={item.image} alt={item.alt} id={item.id} />
                   <MenuRecommend
+                    key={item.id}
                     recommendation={item.recommendation}
                     id={item.id}
                   >
@@ -301,17 +251,9 @@ const Menu = () => {
             );
           })}
         </MenuContainer>
-        <MenuInfo>
-          <PandaCharacter>
-            <CharacterImg src={Character1} />
-          </PandaCharacter>
-          <Info>
-            <InfoText>●この他にもメニューがたくさんございます。</InfoText>
-          </Info>
-        </MenuInfo>
       </Wrapper>
     </Container>
   );
 };
 
-export default Menu;
+export default Exclusive;
