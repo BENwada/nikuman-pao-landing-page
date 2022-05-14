@@ -133,13 +133,14 @@ const MenuName = styled.h2`
   font-weight: normal;
   line-height: 1.2em;
   margin-top: 0.3em;
+  position: relative;
 
   &::after {
     content: url(${(props) => props.hard === "on" && "../images/hard.svg"});
     display: ${(props) => props.hard === "off" && "none"};
     vertical-align: middle;
-    top: auto;
-    bottom: auto;
+    top: 0.2em;
+    right: 10px;
     position: absolute;
     padding-left: 5px;
   }
