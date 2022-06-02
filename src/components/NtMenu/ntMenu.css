@@ -1,16 +1,17 @@
 .ntm-container {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   background-color: #020202;
   overflow: hidden;
+  padding: 20px;
 }
 
 .ntm-wrapper {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 20px 0;
 }
 
 .ntm-wrapper > h1 {
@@ -20,40 +21,38 @@
   margin-bottom: 20px;
 }
 
-.ntMenu {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .menuLeft {
-  width: 100vw;
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
   padding: 20px;
-  position: relative;
 }
 
 .menuLeft > img {
-  height: 100%;
-  margin-left: -300px;
+  width: 800px;
+  /* margin-left: -300px; */
   margin-bottom: -80px;
 }
 
 .menuRight {
-  width: 100vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
   padding: 20px;
-  position: relative;
 }
 
 .menuRight > img {
-  height: 100%;
-  margin-left: -100px;
+  width: 800px;
+  /* margin-left: -100px; */
   margin-bottom: -80px;
 }
 
 .price {
   /* position: absolute; */
+  /* width: 100%; */
   bottom: 0;
   color: white;
   display: flex;
