@@ -1,0 +1,107 @@
+.ntm-container {
+  width: 100%;
+  height: 100%;
+  background-color: #020202;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.ntm-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ntm-wrapper > h1 {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  color: #fcef73;
+  display: flex;
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+
+.menuLeft {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuLeft > img {
+  width: 800px;
+  margin-left: -150px;
+}
+
+.menuRight > img {
+  width: 800px;
+  margin-right: -150px;
+}
+
+.menuRight {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.price {
+  bottom: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.ma-bo-nas > span {
+  margin-top: -120px;
+}
+
+.ma-ra-men > span {
+  margin-top: -20px;
+}
+
+.yodaredori > span {
+  margin-top: -140px;
+}
+
+.ankakeyakisoba > span {
+  margin-top: -50px;
+}
+
+.price h2 {
+  font-size: 40px;
+  line-height: 45px;
+  margin-bottom: 5px;
+}
+
+.price h2 rt {
+  font-size: 15px;
+}
+
+.price p {
+  font-size: 18px;
+}
+
+.price h3 {
+  margin-top: -20px;
+  font-size: 78px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  color: #d20000;
+}
+
+.price > h3 > span {
+  font-size: 34px;
+}
+.price > h3 > span rt {
+  font-size: 13px;
+}
+
+.hard {
+  display: flex;
+  gap: 10px;
+}
+
+.hard > h4 {
+  font-size: 25px;
+}
