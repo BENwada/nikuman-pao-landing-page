@@ -1,6 +1,7 @@
 import "./ntInfo.css";
 import { ReactComponent as Balloon } from "../../svg/nt-balloon.svg";
-import { ReactComponent as PaoHoroyoi } from "../../svg/paoCharHoroyoi.svg";
+// import { ReactComponent as PaoHoroyoi } from "../../svg/paoCharHoroyoi.svg";
+import paoHoroyoi from "../../images/paoCharHoroyoi.png";
 
 const NtInfo = () => {
   return (
@@ -17,7 +18,7 @@ const NtInfo = () => {
             </p>
           </div>
           <div className="right">
-            <PaoHoroyoi />
+            <img src={paoHoroyoi} alt="パオキャラクター" />
           </div>
         </div>
         <p>

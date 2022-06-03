@@ -14,7 +14,7 @@ const NtMenu = () => {
           <br />
           ごゆっくりお楽しみください。
         </h1>
-        <div className="menuLeft">
+        <div className="menuLeft ma-bo-nas">
           <img src={maBoNas} alt="麻婆茄子" />
           <span className="price">
             <h2>
@@ -44,9 +44,9 @@ const NtMenu = () => {
             </h3>
           </span>
         </div>
-        <div className="menuRight">
+        <div className="menuRight ma-ra-men">
           <img src={maRaMen} alt="ma" className="imgRight" />
-          <div className="price">
+          <span className="price">
             <h2>
               <ruby>
                 麻<rt>マー</rt>辣<rt>ラー</rt>麺<rt>ミェン</rt>
@@ -69,11 +69,11 @@ const NtMenu = () => {
                 </ruby>
               </span>
             </h3>
-          </div>
+          </span>
         </div>
-        <div className="menuLeft">
+        <div className="menuLeft yodaredori">
           <img src={yodaredori} alt="ma" className="imgRight" />
-          <div className="price">
+          <span className="price">
             <h2>よだれ鶏</h2>
             <p className="desc">
               茹でた鶏肉を特製の
@@ -88,11 +88,11 @@ const NtMenu = () => {
                 </ruby>
               </span>
             </h3>
-          </div>
+          </span>
         </div>
-        <div className="menuRight">
+        <div className="menuRight ankakeyakisoba">
           <img src={ankakeyakisoba} alt="ma" className="imgRight" />
-          <div className="price">
+          <span className="price">
             <h2>
               海鮮
               <br />
@@ -111,7 +111,7 @@ const NtMenu = () => {
                 </ruby>
               </span>
             </h3>
-          </div>
+          </span>
         </div>
       </div>
     </div>
