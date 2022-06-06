@@ -218,14 +218,14 @@ const Exclusive = () => {
           {ExclusiveMenuData.map((item, index) => {
             return (
               <MenuContentWrapper key={item.id} id={item.id}>
-                <MenuContentContainer key={item.id} id={item.id}>
+                <MenuContentContainer id={item.id}>
                   <ContentWrapper>
                     <Description>
                       {item.descriptionLine1}
                       <br />
                       {item.descriptionLine2}
                     </Description>
-                    <MenuName key={item.id} hard={item.hard}>
+                    <MenuName hard={item.hard}>
                       {item.nameLine1}
                       <br />
                       {item.nameLine2}
