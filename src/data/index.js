@@ -14,7 +14,7 @@ import ImageThirteen from "../images/tamagoba-ga-.png";
 
 export const MenuData = [
   {
-    id: "1",
+    id: "001",
     name: "肉まん",
     price: "290",
     recommendation: "on",

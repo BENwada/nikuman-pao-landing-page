@@ -275,7 +275,7 @@ const Menu = () => {
                       <br />
                       {item.descriptionLine2}
                     </Description>
-                    <MenuName key={item.id} hard={item.hard}>
+                    <MenuName hard={item.hard}>
                       <Ruby>{item.ruby}</Ruby>
                       {item.name}
                       {item.nameLine1}
@@ -288,7 +288,7 @@ const Menu = () => {
                     </Price>
                   </ContentWrapper>
                 </MenuContentContainer>
-                <MenuImageWrapper key={item.id} id={item.id}>
+                <MenuImageWrapper id={item.id}>
                   <MenuImg src={item.image} alt={item.alt} id={item.id} />
                   <MenuRecommend
                     recommendation={item.recommendation}
