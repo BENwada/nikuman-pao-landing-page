@@ -2,22 +2,22 @@ import React from "react";
 import HeroSection from "../components/HeroSection";
 import Menu from "../components/Menu";
 import Commitment from "../components/Commitment";
-import InfoSection from "../components/InfoSection";
 import Exclusive from "../components/Exclusive";
 import NtFooter from "../components/NtFooter";
-import ToggleButton from "../components/ToggleButton";
+import ScrollToTop from "../components/ScrollToTop";
+import LunchMenu from "../components/LunchMenu";
 
 const Home = () => {
   return (
     <>
-      <ToggleButton />
-      <HeroSection />
-      <Menu />
-      <Exclusive />
-      <Commitment />
-      <InfoSection />
-      <NtFooter />
-      {/* <Access /> */}
+      <ScrollToTop>
+        <HeroSection />
+        <Menu />
+        <Exclusive />
+        <LunchMenu />
+        <Commitment />
+        <NtFooter />
+      </ScrollToTop>
     </>
   );
 };

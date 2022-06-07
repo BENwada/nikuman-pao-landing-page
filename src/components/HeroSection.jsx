@@ -7,6 +7,10 @@ import image05 from "../images/image05.png";
 import image06 from "../images/image06.png";
 import logo from "../images/logo.svg";
 import main from "../images/bg.png";
+import { ReactComponent as DayTime } from "../svg/DayTime.svg";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightToBracket } from "@fortawesome/free-solid-svg-icons";
 
 const Container = styled.div`
   display: flex;
@@ -16,6 +20,45 @@ const Container = styled.div`
   background-color: #000;
   height: 100%;
   width: 100vw;
+  position: relative;
+`;
+
+const SwitchPage = styled.div`
+  width: 300px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  gap: 10px;
+  padding: 10px;
+  top: 0px;
+  right: 0px;
+  border-bottom-left-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  transition: 0.5s;
+  z-index: 10;
+`;
+
+const NightLink = styled(Link)`
+  width: 120px;
+  height: 40px;
+  padding: 5px;
+  font-size: 13px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #6f2d37;
+
+  :hover {
+    background-color: #8a3542;
+  }
 `;
 
 const BgWrapper = styled.div`
@@ -110,6 +153,13 @@ const HeroP = styled.p`
 const HeroSection = () => {
   return (
     <Container>
+      <SwitchPage>
+        <DayTime height={"50px"} />
+        <NightLink to="night-part">
+          Night Part
+          <FontAwesomeIcon icon={faArrowRightToBracket} />
+        </NightLink>
+      </SwitchPage>
       <BgWrapper>
         <HeroH1>手づくり肉まんの店パオ</HeroH1>
         <HeroLogo src={logo} />

@@ -46,6 +46,10 @@ const SoftDrinks = styled.div`
   flex-direction: column;
   gap: 10px;
 
+  @media screen and (max-width: 450px) {
+    max-width: 100%;
+  }
+
   .DChara {
     display: flex;
     justify-content: center;
@@ -81,12 +85,16 @@ const DRecommend = styled.li`
   margin: 10px 0px;
   position: relative;
 
+  @media screen and (max-width: 450px) {
+    width: 100%;
+  }
+
   ::before {
     content: "おすすめ";
     position: absolute;
     top: 2px;
     right: 10px;
-    z-index: 11;
+    z-index: 9;
     color: white;
   }
 
@@ -96,7 +104,7 @@ const DRecommend = styled.li`
     top: -5px;
     right: -5px;
     width: 90px;
-    z-index: 10;
+    z-index: 8;
   }
 
   .RPrice {
@@ -114,6 +122,10 @@ const Alcohol = styled.div`
   background: #fffcde;
   position: relative;
   overflow: hidden;
+
+  @media screen and (max-width: 450px) {
+    max-width: 100%;
+  }
 
   h1 {
     display: none;

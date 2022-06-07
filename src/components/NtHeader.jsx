@@ -9,6 +9,9 @@ import image3 from "../images/ma-ra-men-img.png";
 import image4 from "../images/yodaredori-img.png";
 import image5 from "../images/beel.png";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 // import "./ntHeader.css";
 
 const Container = styled.div`
@@ -21,6 +24,44 @@ const Container = styled.div`
   z-index: 0;
 `;
 
+const SwitchPage = styled.div`
+  width: 300px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  gap: 10px;
+  padding: 10px;
+  top: 0px;
+  right: 0px;
+  border-bottom-left-radius: 10px;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  z-index: 10;
+`;
+
+const NightLink = styled(Link)`
+  width: 120px;
+  height: 40px;
+  padding: 5px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: white;
+
+  :hover {
+    background-color: #c4ceee;
+  }
+`;
+
 const Wrapper = styled.div`
   max-width: 100%;
   position: relative;
@@ -31,14 +72,6 @@ const Wrapper = styled.div`
   padding: 150px 0px;
   flex-direction: column;
   gap: 30px;
-`;
-
-const NightTimes = styled.span`
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  left: auto;
-  z-index: 3;
 `;
 
 const Logos = styled.span`
@@ -116,10 +149,14 @@ const Img5 = styled.img`
 const NtHeader = () => {
   return (
     <Container>
+      <SwitchPage>
+        <NightTime height={"60px"} />
+        <NightLink to="/">
+          Daytime part
+          <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+        </NightLink>
+      </SwitchPage>
       <Wrapper>
-        <NightTimes>
-          <NightTime />
-        </NightTimes>
         <Logos className="nt-logo">
           <Rogo />
           <SyuboRogo />

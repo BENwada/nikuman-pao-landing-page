@@ -8,13 +8,14 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #020202;
   overflow: hidden;
+  background-color: #020202;
+
   padding: 20px;
 `;
 
 const Wrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
 `;
@@ -37,6 +38,7 @@ const Title = styled.h1`
 `;
 
 const Left = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
 
@@ -61,6 +63,7 @@ const Left = styled.div`
 `;
 
 const Right = styled.div`
+  width: 100%;
   display: flex;
   align-items: flex-end;
   flex-direction: column;
@@ -128,7 +131,7 @@ const Price = styled.div`
   }
 
   p {
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
 
