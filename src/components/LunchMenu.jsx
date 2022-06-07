@@ -66,11 +66,10 @@ const LunchMenus = styled.div`
     position: absolute;
     font-size: 50px;
     line-height: 53px;
-    top: 150px;
-    left: 50%;
+    top: ${({ top }) => top}px;
+    left: ${({ left }) => left}px;
     font-weight: 800;
-
-    transform: translateX(-46%);
+    transform: scaleX(${({ scalex }) => scalex});
     text-align: center;
   }
 
@@ -127,7 +126,7 @@ const LunchMenu = () => {
         <small>※土・日・祝はランチお休みとなります。</small>
       </Title>
       <Wrapper>
-        <LunchMenus>
+        <LunchMenus top={140} left={6}>
           <h1>
             A<span>ランチ</span>
           </h1>
@@ -148,15 +147,12 @@ const LunchMenu = () => {
             <small>（税込）</small>
           </h3>
         </LunchMenus>
-        <LunchMenus>
+        <LunchMenus top={165} left={6}>
           <h1>
             B<span>ランチ</span>
           </h1>
           <LunchB height={"400px"} width={"350px"} />
-          <h2>
-            麻婆丼
-            <br />
-          </h2>
+          <h2 top={0}>麻婆丼</h2>
           <ul>
             <li>●中華風茶碗蒸し</li>
             <li>●日替わりスープ</li>
@@ -167,7 +163,7 @@ const LunchMenu = () => {
             <small>（税込）</small>
           </h3>
         </LunchMenus>
-        <LunchMenus>
+        <LunchMenus top={165} left={6}>
           <h1>
             C<span>ランチ</span>
           </h1>
@@ -186,7 +182,7 @@ const LunchMenu = () => {
             <small>（税込）</small>
           </h3>
         </LunchMenus>
-        <LunchMenus>
+        <LunchMenus top={138} left={6} scalex={0.8}>
           <h1>
             D<span>ランチ</span>
           </h1>
