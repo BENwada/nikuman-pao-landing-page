@@ -7,6 +7,12 @@ import image05 from "../images/image05.png";
 import image06 from "../images/image06.png";
 import logo from "../images/logo.svg";
 import main from "../images/bg.png";
+import { ReactComponent as DayTime } from "../svg/DayTime.svg";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightToBracket } from "@fortawesome/free-solid-svg-icons";
+import { ReactComponent as TitleH } from "../svg/TitleH.svg";
+import { ReactComponent as TitleV } from "../svg/TitleV.svg";
 
 const Container = styled.div`
   display: flex;
@@ -16,6 +22,69 @@ const Container = styled.div`
   background-color: #000;
   height: 100%;
   width: 100vw;
+  padding-top: 80px;
+  position: relative;
+`;
+
+const TitleHo = styled.div`
+  position: absolute;
+  top: 30px;
+  left: 20px;
+
+  @media screen and (max-width: 780px) {
+    display: none;
+  }
+`;
+
+const TitleVa = styled.div`
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  filter: drop-shadow(0px 0px 3px black);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const SwitchPage = styled.div`
+  width: 300px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  gap: 10px;
+  padding: 10px;
+  top: 0px;
+  right: 0px;
+  border-bottom-left-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  transition: 0.5s;
+  z-index: 10;
+`;
+
+const NightLink = styled(Link)`
+  width: 120px;
+  height: 40px;
+  padding: 5px;
+  font-size: 13px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #6f2d37;
+
+  :hover {
+    background-color: #8a3542;
+  }
 `;
 
 const BgWrapper = styled.div`
@@ -40,7 +109,7 @@ const HeroLogo = styled.img`
   z-index: 3;
 
   @media screen and (max-width: 768px) {
-    margin-top: 110px;
+    margin-top: 50px;
     width: 180px;
     height: 180px;
   }
@@ -110,6 +179,19 @@ const HeroP = styled.p`
 const HeroSection = () => {
   return (
     <Container>
+      <TitleHo>
+        <TitleH width={470} />
+      </TitleHo>
+      <TitleVa>
+        <TitleV height={300} />
+      </TitleVa>
+      <SwitchPage>
+        <DayTime height={"50px"} />
+        <NightLink to="night-part">
+          Night Part
+          <FontAwesomeIcon icon={faArrowRightToBracket} />
+        </NightLink>
+      </SwitchPage>
       <BgWrapper>
         <HeroH1>手づくり肉まんの店パオ</HeroH1>
         <HeroLogo src={logo} />

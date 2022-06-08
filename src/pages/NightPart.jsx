@@ -1,17 +1,20 @@
-import NtDrinkMenu from "../components/NtDrinkMenu/NtDrinkMenu";
-import NtFooter from "../components/NtFooter/NtFooter";
-import NtHeader from "../components/NtHeader/NtHeader";
-import NtInfo from "../components/NtInfo/NtInfo";
-import NtMenu from "../components/NtMenu/NtMenu";
+import NtDrinkMenu from "../components/NtDrinkMenu";
+import NtFooter from "../components/NtFooter";
+import NtHeader from "../components/NtHeader";
+import NtInfo from "../components/NtInfo";
+import NtMenu from "../components/NtMenu";
+import ScrollToTop from "../components/ScrollToTop";
 
 const NightPart = () => {
   return (
     <>
-      <NtHeader />
-      <NtInfo />
-      <NtMenu />
-      <NtDrinkMenu />
-      <NtFooter />
+      <ScrollToTop>
+        <NtHeader />
+        <NtInfo />
+        <NtMenu />
+        <NtDrinkMenu />
+        <NtFooter />
+      </ScrollToTop>
     </>
   );
 };

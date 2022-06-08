@@ -91,7 +91,7 @@ const InfoSection = () => {
           <Title>
             夜の営業は
             <br />
-            <span>ほろ酔いパオ</span>
+            <span>ほろ酔パオ</span>
             <br /> に変身！
           </Title>
           <Description>
@@ -99,7 +99,7 @@ const InfoSection = () => {
           </Description>
           <InfoLink to="/night-part">
             <InfoButton>
-              ほろ酔いパオ
+              ほろ酔パオ
               <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
             </InfoButton>
           </InfoLink>

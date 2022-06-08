@@ -1,14 +1,13 @@
 import { faMap } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
-import MapImageP from "../../svg/map.svg";
-import { ReactComponent as ShopInfo } from "../../svg/shopInfo.svg";
-import { ReactComponent as ContactAdd } from "../../svg/contactAddress.svg";
+import MapImageP from "../svg/map.svg";
+import { ReactComponent as ShopInfo } from "../svg/shopInfo.svg";
+import { ReactComponent as ContactAdd } from "../svg/contactAddress.svg";
 
 const Container = styled.div`
   width: 100vw;
   height: 100%;
-  /* background-color: #000; */
   display: flex;
   flex-direction: column;
   justify-content: center;

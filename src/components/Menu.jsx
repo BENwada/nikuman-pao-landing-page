@@ -25,7 +25,7 @@ const Wrapper = styled.div`
   font-size: 23px;
 
   @media screen and (max-width: 768px) {
-    font-size: 17px;
+    font-size: 19px;
   }
 `;
 
@@ -51,9 +51,13 @@ const MenuH1 = styled.h1`
   text-align: center;
   color: #fff;
   font-weight: normal;
-  margin-top: 1.6em;
+  top: 1.5em;
   line-height: 1.3em;
   position: absolute;
+
+  @media screen and (max-width: 768px) {
+    top: 1.2em;
+  }
 `;
 
 const MenuCharacter = styled.img`
@@ -132,23 +136,22 @@ const MenuName = styled.h2`
   color: #f83d05;
   font-weight: normal;
   line-height: 1.2em;
-  margin-top: 0.3em;
+  margin-top: 0.1em;
   position: relative;
 
   &::after {
     content: url(${(props) => props.hard === "on" && "../images/hard.svg"});
     display: ${(props) => props.hard === "off" && "none"};
-    vertical-align: middle;
     top: 0.2em;
-    right: 10px;
+    right: 0em;
     position: absolute;
-    padding-left: 5px;
   }
 `;
 
 const Ruby = styled.p`
   font-size: 0.4em;
   line-height: 100%;
+  transform: translateY(0.1em);
 `;
 
 const Price = styled.h3`
@@ -160,6 +163,10 @@ const Price = styled.h3`
 
 const Tax = styled.p`
   font-size: 0.6em;
+
+  small {
+    margin-left: -0.4em;
+  }
 `;
 
 const MenuImageWrapper = styled.div`
@@ -221,7 +228,7 @@ const PandaCharacter = styled.div`
 const CharacterImg = styled.img`
   height: 300px;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 780px) {
     height: 120px;
   }
 `;
@@ -239,6 +246,7 @@ const Info = styled.div`
 
 const InfoText = styled.p`
   padding: 10px;
+  white-space: nowrap;
 
   @media screen and (max-width: 768px) {
     font-size: 0.7em;
@@ -275,7 +283,7 @@ const Menu = () => {
                       <br />
                       {item.descriptionLine2}
                     </Description>
-                    <MenuName key={item.id} hard={item.hard}>
+                    <MenuName hard={item.hard}>
                       <Ruby>{item.ruby}</Ruby>
                       {item.name}
                       {item.nameLine1}
@@ -284,11 +292,13 @@ const Menu = () => {
                     </MenuName>
                     <Price key={item.id}>
                       {item.price}
-                      <Tax>円（税込）</Tax>
+                      <Tax>
+                        円<small>（税込）</small>
+                      </Tax>
                     </Price>
                   </ContentWrapper>
                 </MenuContentContainer>
-                <MenuImageWrapper key={item.id} id={item.id}>
+                <MenuImageWrapper id={item.id}>
                   <MenuImg src={item.image} alt={item.alt} id={item.id} />
                   <MenuRecommend
                     recommendation={item.recommendation}
