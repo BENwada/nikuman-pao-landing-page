@@ -10,8 +10,12 @@ const Container = styled.div`
   height: 100%;
   overflow: hidden;
   background-color: #020202;
+  font-size: 10px;
+  padding: 2em;
 
-  padding: 20px;
+  @media screen and (max-width: 480px) {
+    font-size: 9px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -25,15 +29,15 @@ const Title = styled.h1`
   color: #fcef73;
   display: flex;
   justify-content: center;
-  font-size: 23px;
-  margin-bottom: 20px;
+  font-size: 2em;
+  margin-bottom: 2em;
 
   @media screen and (min-width: 780px) {
     br {
       display: none;
     }
-    font-size: 30px;
-    margin: 30px 0;
+    font-size: 3em;
+    margin: 1em 0;
   }
 `;
 
@@ -42,17 +46,12 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
 
-  img {
-    width: 800px;
-    margin-left: -150px;
-  }
-
   .ma-bo-nas {
-    margin-top: -120px;
+    margin-top: -110px;
   }
 
   .yodaredori {
-    margin-top: -140px;
+    margin-top: -120px;
   }
 
   @media screen and (min-width: 780px) {
@@ -68,23 +67,25 @@ const Right = styled.div`
   align-items: flex-end;
   flex-direction: column;
 
-  img {
-    width: 800px;
-    margin-right: -150px;
-  }
-
   .ma-ra-men {
-    margin-top: -20px;
+    margin-top: -2em;
   }
 
   .ankakeyakisoba {
-    margin-top: -50px;
+    margin-top: -5em;
   }
+
   @media screen and (min-width: 780px) {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
   }
+`;
+
+const MenuImg = styled.img`
+  width: ${({ width }) => width}px;
+  margin-right: ${({ mr }) => mr}px;
+  margin-left: ${({ ml }) => ml}px;
 `;
 
 const Price = styled.div`
@@ -93,45 +94,53 @@ const Price = styled.div`
   display: flex;
   flex-direction: column;
 
-  h2 {
-    font-size: 40px;
-    line-height: 45px;
-    margin-bottom: 5px;
-
-    rt {
-      font-size: 15px;
-      line-height: 17px;
-    }
-  }
   .hard {
     display: flex;
-    gap: 10px;
-    font-size: 40px;
-  }
-
-  h3 {
-    margin-top: -20px;
-    font-size: 78px;
-    font-family: "Zen Kaku Gothic New", sans-serif;
-    color: #d20000;
-
-    span {
-      font-size: 40px;
-      line-height: 40px;
-      margin-left: -5px;
-
-      rt {
-        font-size: 13px;
-      }
-    }
+    align-items: center;
+    gap: 1em;
   }
 
   h4 {
-    font-size: 25px;
+    font-size: 2.5em;
+    line-height: 100%;
   }
+`;
 
-  p {
-    font-size: 16px;
+const MenuName = styled.h2`
+  font-size: 4em;
+  line-height: 1.1em;
+
+  rt {
+    font-size: 40%;
+    line-height: 100%;
+  }
+`;
+
+const MenuDesc = styled.p`
+  margin-top: 0.5em;
+  font-size: 1.8em;
+
+  rt {
+    font-size: 30%;
+    line-height: 100%;
+  }
+`;
+
+const Payment = styled.h3`
+  margin-top: -0.3em;
+  font-size: 7.8em;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  color: #d20000;
+
+  span {
+    font-size: 50%;
+    line-height: 100%;
+    margin-left: -0.15em;
+
+    rt {
+      font-size: 30%;
+      line-height: 100%;
+    }
   }
 `;
 
@@ -145,14 +154,14 @@ const NtMenu = () => {
       </Title>
       <Wrapper>
         <Left>
-          <img src={maBoNas} alt="麻婆茄子" />
+          <MenuImg width={750} ml={-170} src={maBoNas} alt="麻婆茄子" />
           <Price className="ma-bo-nas">
-            <h2>
+            <MenuName>
               <ruby>
                 麻<rt>マー</rt>婆<rt>ボー</rt>茄<rt>な</rt>子<rt>す</rt>
               </ruby>
-            </h2>
-            <p className="desc">
+            </MenuName>
+            <MenuDesc>
               <ruby>
                 甜麺醤<rt>てんめんじゃん</rt>
               </ruby>
@@ -163,84 +172,102 @@ const NtMenu = () => {
               の特製ダレで
               <br />
               甘辛く炒めました。
-            </p>
-            <h3>
+            </MenuDesc>
+            <Payment>
               750
               <span>
                 <ruby>
                   円<rt>（税込）</rt>
                 </ruby>
               </span>
-            </h3>
+            </Payment>
           </Price>
         </Left>
         <Right>
-          <img src={maRaMen} alt="ma" className="imgRight" />
+          <MenuImg
+            width={680}
+            mr={-170}
+            src={maRaMen}
+            alt="ma"
+            className="imgRight"
+          />
           <Price className="ma-ra-men">
-            <h2>
+            <MenuName>
               <ruby>
                 麻<rt>マー</rt>辣<rt>ラー</rt>麺<rt>ミェン</rt>
               </ruby>
-            </h2>
+            </MenuName>
             <span className="hard">
               <h4>自家製手打ち麺</h4>
               <Hard />
             </span>
-            <p className="desc">
+            <MenuDesc className="desc">
               しびれる辛さの赤いスープ。手打ち麺に
               <br />
               よくからみ、箸が止まらぬ旨さです！
-            </p>
-            <h3>
+            </MenuDesc>
+            <Payment>
               780
               <span>
                 <ruby>
                   円<rt>（税込）</rt>
                 </ruby>
               </span>
-            </h3>
+            </Payment>
           </Price>
         </Right>
         <Left>
-          <img src={yodaredori} alt="ma" className="imgRight" />
+          <MenuImg
+            width={750}
+            ml={-170}
+            src={yodaredori}
+            alt="ma"
+            className="imgRight"
+          />
           <Price className="yodaredori">
-            <h2>よだれ鶏</h2>
-            <p className="desc">
+            <MenuName>よだれ鶏</MenuName>
+            <MenuDesc className="desc">
               茹でた鶏肉を特製の
               <br />
               辛味ダレでどうぞ。
-            </p>
-            <h3>
+            </MenuDesc>
+            <Payment>
               580
               <span>
                 <ruby>
                   円<rt>（税込）</rt>
                 </ruby>
               </span>
-            </h3>
+            </Payment>
           </Price>
         </Left>
         <Right>
-          <img src={ankakeyakisoba} alt="ma" className="imgRight" />
+          <MenuImg
+            width={850}
+            mr={-170}
+            src={ankakeyakisoba}
+            alt="ma"
+            className="imgRight"
+          />
           <Price className="ankakeyakisoba">
-            <h2>
+            <MenuName>
               海鮮
               <br />
               あんかけ焼そば
-            </h2>
-            <p className="desc">
+            </MenuName>
+            <MenuDesc className="desc">
               えび、イカ、アサリ等の魚介と
               <br />
               野菜がたっぷり。シンプルな塩味で。
-            </p>
-            <h3>
+            </MenuDesc>
+            <Payment>
               880
               <span>
                 <ruby>
                   円<rt>（税込）</rt>
                 </ruby>
               </span>
-            </h3>
+            </Payment>
           </Price>
         </Right>
       </Wrapper>

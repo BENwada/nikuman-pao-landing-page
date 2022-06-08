@@ -11,7 +11,7 @@ import image5 from "../images/beel.png";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRightToBracket } from "@fortawesome/free-solid-svg-icons";
 // import "./ntHeader.css";
 
 const Container = styled.div`
@@ -153,7 +153,7 @@ const NtHeader = () => {
         <NightTime height={"60px"} />
         <NightLink to="/">
           Daytime part
-          <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          <FontAwesomeIcon icon={faArrowRightToBracket} />
         </NightLink>
       </SwitchPage>
       <Wrapper>

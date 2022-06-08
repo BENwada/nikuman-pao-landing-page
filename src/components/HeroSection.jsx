@@ -11,6 +11,8 @@ import { ReactComponent as DayTime } from "../svg/DayTime.svg";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightToBracket } from "@fortawesome/free-solid-svg-icons";
+import { ReactComponent as TitleH } from "../svg/TitleH.svg";
+import { ReactComponent as TitleV } from "../svg/TitleV.svg";
 
 const Container = styled.div`
   display: flex;
@@ -20,7 +22,31 @@ const Container = styled.div`
   background-color: #000;
   height: 100%;
   width: 100vw;
+  padding-top: 80px;
   position: relative;
+`;
+
+const TitleHo = styled.div`
+  position: absolute;
+  top: 30px;
+  left: 20px;
+
+  @media screen and (max-width: 780px) {
+    display: none;
+  }
+`;
+
+const TitleVa = styled.div`
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  filter: drop-shadow(0px 0px 3px black);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 
 const SwitchPage = styled.div`
@@ -29,7 +55,7 @@ const SwitchPage = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   position: fixed;
   gap: 10px;
   padding: 10px;
@@ -83,7 +109,7 @@ const HeroLogo = styled.img`
   z-index: 3;
 
   @media screen and (max-width: 768px) {
-    margin-top: 110px;
+    margin-top: 50px;
     width: 180px;
     height: 180px;
   }
@@ -153,6 +179,12 @@ const HeroP = styled.p`
 const HeroSection = () => {
   return (
     <Container>
+      <TitleHo>
+        <TitleH width={470} />
+      </TitleHo>
+      <TitleVa>
+        <TitleV height={300} />
+      </TitleVa>
       <SwitchPage>
         <DayTime height={"50px"} />
         <NightLink to="night-part">

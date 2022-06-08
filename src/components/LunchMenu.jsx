@@ -9,10 +9,15 @@ const Container = styled.div`
   width: 100vw;
   height: 100%;
   background-color: black;
+  font-size: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 480px) {
+    font-size: 9px;
+  } ;
 `;
 
 const Title = styled.div`
@@ -26,8 +31,29 @@ const Title = styled.div`
   padding-top: 20px;
 
   h1 {
-    font-size: 55px;
+    font-size: 5.5em;
+    line-height: 110%;
+    margin-bottom: 10px;
   }
+
+  h2 {
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 110%;
+    small {
+      font-size: 0.8em;
+    }
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+
+  @media screen and (min-width: 780px) {
+    br {
+      display: none;
+    }
+  } ;
 `;
 
 const Wrapper = styled.div`
@@ -106,9 +132,11 @@ const LunchMenus = styled.div`
     bottom: 15px;
 
     span {
+      font-family: "Zen Kaku Gothic New", sans-serif;
       font-size: 25px;
     }
     small {
+      font-family: "Zen Kaku Gothic New", sans-serif;
       font-size: 25px;
       margin-left: -10px;
     }
@@ -121,9 +149,11 @@ const LunchMenu = () => {
       <Title>
         <h1>パオのランチ</h1>
         <h2>
-          水曜〜金曜　<small>AM</small>11:00〜<small>PM</small>15:00
+          水曜〜金曜
+          <br />
+          <small> AM</small>11:00〜<small>PM</small>15:00
         </h2>
-        <small>※土・日・祝はランチお休みとなります。</small>
+        <p>※土・日・祝はランチお休みとなります。</p>
       </Title>
       <Wrapper>
         <LunchMenus top={140} left={6}>
@@ -182,7 +212,7 @@ const LunchMenu = () => {
             <small>（税込）</small>
           </h3>
         </LunchMenus>
-        <LunchMenus top={138} left={6} scalex={0.8}>
+        <LunchMenus top={138} left={8} scalex={0.8}>
           <h1>
             D<span>ランチ</span>
           </h1>

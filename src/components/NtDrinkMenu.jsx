@@ -303,7 +303,7 @@ const NtDrinkMenu = () => {
           <h1>アルコールドリンク</h1>
           <AlcoholeH1 />
           <span className="alc-char">
-            <PaoCharAlc />
+            <PaoCharAlc width={140} />
           </span>
           <ul>
             <li className="alcohol">
