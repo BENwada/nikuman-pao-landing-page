@@ -151,7 +151,8 @@ const MenuName = styled.h2`
 const Ruby = styled.p`
   font-size: 0.4em;
   line-height: 100%;
-  transform: translateY(0.1em);
+  position: relative;
+  top: 0.3em;
 `;
 
 const Price = styled.h3`

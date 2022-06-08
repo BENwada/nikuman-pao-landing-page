@@ -109,10 +109,13 @@ const Price = styled.div`
 const MenuName = styled.h2`
   font-size: 4em;
   line-height: 1.1em;
+  position: relative;
 
   rt {
     font-size: 40%;
     line-height: 100%;
+    position: relative;
+    top: 0.6em;
   }
 `;
 
@@ -123,6 +126,8 @@ const MenuDesc = styled.p`
   rt {
     font-size: 30%;
     line-height: 100%;
+    position: relative;
+    top: 0.6em;
   }
 `;
 
