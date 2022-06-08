@@ -183,7 +183,25 @@ const Alcohol = styled.div`
       }
 
       .aPrice span {
-        margin-left: -5px;
+        margin-left: 3px;
+
+        ruby[data-ruby] {
+          position: relative;
+        }
+
+        ruby[data-ruby]::before {
+          content: attr(data-ruby);
+          position: absolute;
+          left: -0.9em;
+          top: -2.3em;
+          white-space: nowrap;
+          text-align: center;
+          font-size: 0.4em;
+        }
+
+        rt {
+          display: none;
+        }
       }
 
       .priceRight {
@@ -375,7 +393,7 @@ const NtDrinkMenu = () => {
                   <DPrice className="aPrice">
                     380
                     <span>
-                      <ruby>
+                      <ruby data-ruby="（税込）">
                         円 <rt>（税込）</rt>
                       </ruby>
                     </span>
@@ -388,7 +406,7 @@ const NtDrinkMenu = () => {
                   <DPrice className="aPrice">
                     580
                     <span>
-                      <ruby>
+                      <ruby data-ruby="（税込）">
                         円 <rt>（税込）</rt>
                       </ruby>
                     </span>

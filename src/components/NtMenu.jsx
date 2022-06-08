@@ -111,23 +111,46 @@ const MenuName = styled.h2`
   line-height: 1.1em;
   position: relative;
 
-  rt {
-    font-size: 40%;
-    line-height: 100%;
+  ruby[data-ruby] {
     position: relative;
-    top: 0.6em;
+  }
+
+  ruby[data-ruby]::before {
+    content: attr(data-ruby);
+    position: absolute;
+    left: 0em;
+    top: -1.4em;
+    text-align: center;
+    font-size: 0.4em;
+  }
+
+  rt {
+    display: none;
   }
 `;
 
 const MenuDesc = styled.p`
-  margin-top: 0.5em;
+  margin-top: 0.4em;
   font-size: 1.8em;
+  position: relative;
+
+  ruby[data-ruby] {
+    position: relative;
+  }
+
+  ruby[data-ruby]::before {
+    content: attr(data-ruby);
+    position: absolute;
+    left: -1.2em;
+    top: -1em;
+    white-space: nowrap;
+    text-align: center;
+    transform: scale(0.7);
+    font-size: 0.5em;
+  }
 
   rt {
-    font-size: 30%;
-    line-height: 100%;
-    position: relative;
-    top: 0.6em;
+    display: none;
   }
 `;
 
@@ -140,12 +163,24 @@ const Payment = styled.h3`
   span {
     font-size: 50%;
     line-height: 100%;
-    margin-left: -0.15em;
+  }
 
-    rt {
-      font-size: 30%;
-      line-height: 100%;
-    }
+  ruby[data-ruby] {
+    position: relative;
+  }
+
+  ruby[data-ruby]::before {
+    content: attr(data-ruby);
+    position: absolute;
+    left: -0.7em;
+    top: -1.2em;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 0.4em;
+  }
+
+  rt {
+    display: none;
   }
 `;
 
@@ -162,16 +197,16 @@ const NtMenu = () => {
           <MenuImg width={750} ml={-170} src={maBoNas} alt="麻婆茄子" />
           <Price className="ma-bo-nas">
             <MenuName>
-              <ruby>
+              <ruby data-ruby="マーボーなす">
                 麻<rt>マー</rt>婆<rt>ボー</rt>茄<rt>な</rt>子<rt>す</rt>
               </ruby>
             </MenuName>
             <MenuDesc>
-              <ruby>
+              <ruby data-ruby="てんめんじゃん">
                 甜麺醤<rt>てんめんじゃん</rt>
               </ruby>
               と
-              <ruby>
+              <ruby data-ruby="とうばんじゃん">
                 豆板醤<rt>とうばんじゃん</rt>
               </ruby>
               の特製ダレで
@@ -181,7 +216,7 @@ const NtMenu = () => {
             <Payment>
               750
               <span>
-                <ruby>
+                <ruby data-ruby="（税込）">
                   円<rt>（税込）</rt>
                 </ruby>
               </span>
@@ -198,7 +233,7 @@ const NtMenu = () => {
           />
           <Price className="ma-ra-men">
             <MenuName>
-              <ruby>
+              <ruby data-ruby="マーラーミェン">
                 麻<rt>マー</rt>辣<rt>ラー</rt>麺<rt>ミェン</rt>
               </ruby>
             </MenuName>
@@ -214,7 +249,7 @@ const NtMenu = () => {
             <Payment>
               780
               <span>
-                <ruby>
+                <ruby data-ruby="（税込）">
                   円<rt>（税込）</rt>
                 </ruby>
               </span>
@@ -239,7 +274,7 @@ const NtMenu = () => {
             <Payment>
               580
               <span>
-                <ruby>
+                <ruby data-ruby="（税込）">
                   円<rt>（税込）</rt>
                 </ruby>
               </span>
@@ -268,7 +303,7 @@ const NtMenu = () => {
             <Payment>
               880
               <span>
-                <ruby>
+                <ruby data-ruby="（税込）">
                   円<rt>（税込）</rt>
                 </ruby>
               </span>
