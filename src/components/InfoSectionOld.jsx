@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import thaShu from "../images/tha-shu.png";
-import shumai from "../images/shumai.png";
-import maBo from "../images/ma-bo.png";
-import ebichiri from "../images/ebichiri.png";
+import thaShu from "../images/tha-shu.webp";
+import shumai from "../images/shumai.webp";
+import maBo from "../images/ma-bo.webp";
+import ebichiri from "../images/ebichiri.webp";
 
 const Container = styled.div`
   width: 100vw;

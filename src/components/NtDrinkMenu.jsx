@@ -250,7 +250,7 @@ const NtDrinkMenu = () => {
       <Wrapper>
         <SoftDrinks>
           <div className="DChara">
-            <DrinkChar />
+            <DrinkChar alt="パオキャラクター" />
           </div>
           <ul className="drinks">
             <li className="drink">

@@ -2,7 +2,7 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import nightPartImg from "../images/horoyoImg.png";
+import nightPartImg from "../images/horoyoImg.webp";
 
 const Container = styled.div`
   width: 100vw;

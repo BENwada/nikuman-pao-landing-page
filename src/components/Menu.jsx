@@ -264,7 +264,7 @@ const Menu = () => {
             <br />
             中華まん
           </MenuH1>
-          <MenuCharacter src={Character} />
+          <MenuCharacter src={Character} alt="パオキャラクター" />
           <MenuP>
             ふっくら、もちもち、
             <br />
@@ -305,7 +305,7 @@ const Menu = () => {
                     recommendation={item.recommendation}
                     id={item.id}
                   >
-                    <SpeechBubble src={Bubble} id={item.id} />
+                    <SpeechBubble src={Bubble} id={item.id} alt="吹き出し" />
                     <Speech>おすすめ</Speech>
                   </MenuRecommend>
                 </MenuImageWrapper>
@@ -315,7 +315,7 @@ const Menu = () => {
         </MenuContainer>
         <MenuInfo>
           <PandaCharacter>
-            <CharacterImg src={Character1} />
+            <CharacterImg src={Character1} alt="パオキャラクター" />
           </PandaCharacter>
           <Info>
             <InfoText>●この他にもメニューがたくさんございます。</InfoText>

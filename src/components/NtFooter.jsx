@@ -105,7 +105,7 @@ const NtFooter = () => {
           お待ちしております。
         </MapDesc>
         <Map href="https://goo.gl/maps/7pWxxpaexZzhgCKT6" target="_blank">
-          <MapImage src={MapImageP} />
+          <MapImage src={MapImageP} alt="店舗地図" />
           <span>
             Google Mapで見る
             <FontAwesomeIcon icon={faMap} />

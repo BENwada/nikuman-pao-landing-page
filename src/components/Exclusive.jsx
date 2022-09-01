@@ -205,7 +205,7 @@ const Exclusive = () => {
             <br />
             バーガー
           </MenuH1>
-          <MenuCharacter src={Character} />
+          <MenuCharacter src={Character} alt="パオキャラクター" />
           <MenuP>
             期間限定の具材を
             <br />
@@ -243,7 +243,7 @@ const Exclusive = () => {
                     recommendation={item.recommendation}
                     id={item.id}
                   >
-                    <SpeechBubble src={Bubble} id={item.id} />
+                    <SpeechBubble src={Bubble} id={item.id} alt="吹き出し" />
                     <Speech>おすすめ</Speech>
                   </MenuRecommend>
                 </MenuImageWrapper>

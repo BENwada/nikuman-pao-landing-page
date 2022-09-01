@@ -169,7 +169,7 @@ const InfoSection = () => {
               <br />
               やさしさ
             </LeftH2>
-            <LeftCharacter src={titleBgW} />
+            <LeftCharacter src={titleBgW} alt="パオキャラクター" />
             <LeftDisc>
               PAOの料理は
               <br />
@@ -184,7 +184,7 @@ const InfoSection = () => {
               <br />
               もちもち感
             </RightH2>
-            <RightCharacter src={titleBgW} />
+            <RightCharacter src={titleBgW} alt="パオキャラクター" />
             <RightDisc>
               中華まんの生地も手づくり。
               <br />

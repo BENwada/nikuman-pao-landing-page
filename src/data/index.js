@@ -1,16 +1,16 @@
-import ImageOne from "../images/nikuman.png";
-import ImageTwo from "../images/gomokuman.png";
-import ImageThree from "../images/mara-man.png";
-import ImageFour from "../images/tamanegiman.png";
-import ImageFive from "../images/kiriboshi.png";
-import ImageSix from "../images/sausage.png";
-import ImageSeven from "../images/anko.png";
-import ImageEight from "../images/roastedPorkFillet.png";
-import ImageNine from "../images/ShrimpChili.png";
-import ImageTen from "../images/SweetAndSourPork.png";
-import ImageEleven from "../images/ebiabokadoba-ga-.png";
-import ImageTwelve from "../images/koumitoriba-ga-.png";
-import ImageThirteen from "../images/tamagoba-ga-.png";
+import ImageOne from "../images/nikuman.webp";
+import ImageTwo from "../images/gomokuman.webp";
+import ImageThree from "../images/mara-man.webp";
+import ImageFour from "../images/tamanegiman.webp";
+import ImageFive from "../images/kiriboshi.webp";
+import ImageSix from "../images/sausage.webp";
+import ImageSeven from "../images/anko.webp";
+import ImageEight from "../images/roastedPorkFillet.webp";
+import ImageNine from "../images/ShrimpChili.webp";
+import ImageTen from "../images/SweetAndSourPork.webp";
+import ImageEleven from "../images/ebiabokadoba-ga-.webp";
+import ImageTwelve from "../images/koumitoriba-ga-.webp";
+import ImageThirteen from "../images/tamagoba-ga-.webp";
 
 export const MenuData = [
   {

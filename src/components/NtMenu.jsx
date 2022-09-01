@@ -1,7 +1,7 @@
-import maBoNas from "../images/ma-bo-nas.png";
-import maRaMen from "../images/ma-ra-men.png";
-import yodaredori from "../images/yodaredori.png";
-import ankakeyakisoba from "../images/ankakeyakisoba.png";
+import maBoNas from "../images/ma-bo-nas.webp";
+import maRaMen from "../images/ma-ra-men.webp";
+import yodaredori from "../images/yodaredori.webp";
+import ankakeyakisoba from "../images/ankakeyakisoba.webp";
 import { ReactComponent as Hard } from "../svg/hard.svg";
 import styled from "styled-components";
 
@@ -239,7 +239,7 @@ const NtMenu = () => {
             </MenuName>
             <span className="hard">
               <h4>自家製手打ち麺</h4>
-              <Hard />
+              <Hard alt="辛口マーク" />
             </span>
             <MenuDesc className="desc">
               しびれる辛さの赤いスープ。手打ち麺に
