@@ -5,6 +5,13 @@ __metadata:
   version: 7
   cacheKey: 9
 
+"@adobe/css-tools@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@adobe/css-tools@npm:4.0.1"
+  checksum: dd065e95339bd9b3846f3b27488c7141b8e8a1ca176eb2807fb4d18bbe817a39dac89925cf5a6de882dbc823c0ad4af44c63ff01be671e011482d768e7fb83cf
+  languageName: node
+  linkType: hard
+
 "@ampproject/remapping@npm:^2.1.0":
   version: 2.2.0
   resolution: "@ampproject/remapping@npm:2.2.0"
@@ -1444,7 +1451,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.7.6, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
   version: 7.18.3
   resolution: "@babel/runtime@npm:7.18.3"
   dependencies:
@@ -1698,49 +1705,49 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/fontawesome-common-types@npm:6.1.1":
-  version: 6.1.1
-  resolution: "@fortawesome/fontawesome-common-types@npm:6.1.1"
-  checksum: 4575a504cf809dbf72e9694d55634013601126002f8a3c37aa9ba881e5b47d5489a778d4f64cb34d18827ee336b1962534dc61c42647f223cd0891b2dd1b2dbd
+"@fortawesome/fontawesome-common-types@npm:6.2.1":
+  version: 6.2.1
+  resolution: "@fortawesome/fontawesome-common-types@npm:6.2.1"
+  checksum: dccff10b278a85faaf9f0e3cbcfd543c3c7a2870457bd710294fdbc0f3ce5b0bec720d989da0cff010656ff712e3766b8591f8c6ee8f9b5f2a2b6c238903572a
   languageName: node
   linkType: hard
 
-"@fortawesome/fontawesome-svg-core@npm:^6.1.1":
-  version: 6.1.1
-  resolution: "@fortawesome/fontawesome-svg-core@npm:6.1.1"
+"@fortawesome/fontawesome-svg-core@npm:^6.2.1":
+  version: 6.2.1
+  resolution: "@fortawesome/fontawesome-svg-core@npm:6.2.1"
   dependencies:
-    "@fortawesome/fontawesome-common-types": "npm:6.1.1"
-  checksum: e7643d99f85892694961c0cd5c96fb483bc2bd5a36f86c02ad2d4e2b38aec6f41e90aae3761788e8f47a2c15e9111cbb8a2e9e1bdde6d6e8cd78305fbe1fbd35
+    "@fortawesome/fontawesome-common-types": "npm:6.2.1"
+  checksum: 1e7901c49d440b6892400bd603a225436fb9bae787455f3b6cb8fc95a2f0f1f530f120b9ba6e24e4c982fcff40c97a0524631dcfebf5d5bd6b06387c435bf7ec
   languageName: node
   linkType: hard
 
-"@fortawesome/free-regular-svg-icons@npm:^6.1.1":
-  version: 6.1.1
-  resolution: "@fortawesome/free-regular-svg-icons@npm:6.1.1"
+"@fortawesome/free-regular-svg-icons@npm:^6.2.1":
+  version: 6.2.1
+  resolution: "@fortawesome/free-regular-svg-icons@npm:6.2.1"
   dependencies:
-    "@fortawesome/fontawesome-common-types": "npm:6.1.1"
-  checksum: 580f032824424f89b371b581af1b7ec7446e4e26cb7aff6af42a6772540fcc8f6764885aac8716bcf6e2953cb63b37b3ddb0842bb9f6485986348c8c849c8760
+    "@fortawesome/fontawesome-common-types": "npm:6.2.1"
+  checksum: c69b0b65a6f059fcc704c45ace9b5b2c463f575abeca847b3ab758e87317e3b542a5d647d0d2ff1ececb6019da32839cd3962384f95a2bbf3567b97f77cbbe3e
   languageName: node
   linkType: hard
 
-"@fortawesome/free-solid-svg-icons@npm:^6.1.1":
-  version: 6.1.1
-  resolution: "@fortawesome/free-solid-svg-icons@npm:6.1.1"
+"@fortawesome/free-solid-svg-icons@npm:^6.2.1":
+  version: 6.2.1
+  resolution: "@fortawesome/free-solid-svg-icons@npm:6.2.1"
   dependencies:
-    "@fortawesome/fontawesome-common-types": "npm:6.1.1"
-  checksum: bf85e87aa6ef2278e58708b944609fb47be730680b00d473f752b41de551a5126bf66e0fc3a26395e39f33190d1be37e788976dee739aee3bb4a3d83b26cfb64
+    "@fortawesome/fontawesome-common-types": "npm:6.2.1"
+  checksum: 1c0effafa1f6b5de5da5d4c0eac3ca75951f59e9820f23e28aa45e89d739a41826ade4d8bd8127a478d8e10a92c05d981c1a22a521adc7f71bb94e23a6956d1b
   languageName: node
   linkType: hard
 
-"@fortawesome/react-fontawesome@npm:^0.1.18":
-  version: 0.1.18
-  resolution: "@fortawesome/react-fontawesome@npm:0.1.18"
+"@fortawesome/react-fontawesome@npm:^0.1.19":
+  version: 0.1.19
+  resolution: "@fortawesome/react-fontawesome@npm:0.1.19"
   dependencies:
     prop-types: "npm:^15.8.1"
   peerDependencies:
     "@fortawesome/fontawesome-svg-core": ~1 || ~6
     react: ">=16.x"
-  checksum: a72366b56adfa37b67aa629387f9e1055db0e5ac1318fe81d9c3c76c020bbda06ae69ee86d94595fa209d58ca209ccfc6ae10c83bf408e56232d743cba5871f5
+  checksum: dad80c1de458706fe1aafc100dc0ea7b8bf478e21e9a4580417106dbc3dab29a99070e56edf995bf01eca2b0d549ac7da8fbc36c5248c706ee29f47c7d522b39
   languageName: node
   linkType: hard
 
@@ -2194,6 +2201,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@remix-run/router@npm:1.0.3":
+  version: 1.0.3
+  resolution: "@remix-run/router@npm:1.0.3"
+  checksum: bbeb972d758ac5c293aac8c3ccb68e6d93f4f15e67fb7e8128a0cc09c5f9cdf3f78824037900e58075f8f2497507393ccd8bedfe684be8c9d88463f62c5a48a4
+  languageName: node
+  linkType: hard
+
 "@rollup/plugin-babel@npm:^5.2.0":
   version: 5.3.1
   resolution: "@rollup/plugin-babel@npm:5.3.1"
@@ -2443,26 +2457,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/jest-dom@npm:^5.11.4":
-  version: 5.16.4
-  resolution: "@testing-library/jest-dom@npm:5.16.4"
+"@testing-library/jest-dom@npm:^5.16.5":
+  version: 5.16.5
+  resolution: "@testing-library/jest-dom@npm:5.16.5"
   dependencies:
+    "@adobe/css-tools": "npm:^4.0.1"
     "@babel/runtime": "npm:^7.9.2"
     "@types/testing-library__jest-dom": "npm:^5.9.1"
     aria-query: "npm:^5.0.0"
     chalk: "npm:^3.0.0"
-    css: "npm:^3.0.0"
     css.escape: "npm:^1.5.1"
     dom-accessibility-api: "npm:^0.5.6"
     lodash: "npm:^4.17.15"
     redent: "npm:^3.0.0"
-  checksum: fc8b21abc18346c686703493865a6ad5b404e43e3ff1c9b4b1bd1cfc6058af686c0c77952458ed2260c5b5cf43be430fba6e6bb783b0a7bdbc9f2735d39d91cb
+  checksum: c05a25242e9edf8b9ddb3c431bcbdd1cd7cc8e1cbe67ef2727f2e95327e2486677572e7fc32f81bfbfa27013a80057508aca90d0c06de360af5a3d69fae19de1
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:^13.2.0":
-  version: 13.3.0
-  resolution: "@testing-library/react@npm:13.3.0"
+"@testing-library/react@npm:^13.4.0":
+  version: 13.4.0
+  resolution: "@testing-library/react@npm:13.4.0"
   dependencies:
     "@babel/runtime": "npm:^7.12.5"
     "@testing-library/dom": "npm:^8.5.0"
@@ -2470,16 +2484,16 @@ __metadata:
   peerDependencies:
     react: ^18.0.0
     react-dom: ^18.0.0
-  checksum: a29c3335cb23ee30c945bca3c79904c441d506152c83cd814cfc009571df31c32cdf300369d6c070f99f92610441e69ce232ca3761a1fbac12dfb1f5bffa8597
+  checksum: 2030d32070b3d43bc374843e9989192be2bdc44d7280aebe17c9223637134b4f769c7077f704d5771cd29174b3f28b91dfae09a95a5d2b5d5db2a5ee689ef67f
   languageName: node
   linkType: hard
 
-"@testing-library/user-event@npm:^14.2.0":
-  version: 14.2.0
-  resolution: "@testing-library/user-event@npm:14.2.0"
+"@testing-library/user-event@npm:^14.4.3":
+  version: 14.4.3
+  resolution: "@testing-library/user-event@npm:14.4.3"
   peerDependencies:
     "@testing-library/dom": ">=7.21.4"
-  checksum: 44d9a781a5c44ab9c3e0c356bcb87eaab6d8425b9ad03800e620a6ad8ea7ebe5ecd7ee03006dc09ce1b04fac31c10ed747de1d40cea36836c25b8642c532addf
+  checksum: f3c3b67c73bf066480434c4cdd865ff01b87577d344babfba7e59528dd8531f8611bb6d262d7be475bea0c964c7f4e625311ef97d3a30d85184227a3b5e3fe55
   languageName: node
   linkType: hard
 
@@ -3631,15 +3645,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"atob@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "atob@npm:2.1.2"
-  bin:
-    atob: bin/atob.js
-  checksum: af5b2c7d2b7beb2ece862c42999ef7e43ed1ecf67857f44b021ea4267fdf7aad4b8ec5f59fde2a2d581b6cbda9108e979274642e2c6ab3b32a4203ee1ddad3d2
-  languageName: node
-  linkType: hard
-
 "autoprefixer@npm:^10.4.7":
   version: 10.4.7
   resolution: "autoprefixer@npm:10.4.7"
@@ -4772,17 +4777,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "css@npm:3.0.0"
-  dependencies:
-    inherits: "npm:^2.0.4"
-    source-map: "npm:^0.6.1"
-    source-map-resolve: "npm:^0.6.0"
-  checksum: e42119ab4e4126f3162f5654a2877b978c19612430427f3cd60ca4b19b8178b70e2dc8f64c3942710b9e24a05071779cdd3b05e29cd6354b4fc1cb46a6f4409b
-  languageName: node
-  linkType: hard
-
 "cssdb@npm:^6.6.3":
   version: 6.6.3
   resolution: "cssdb@npm:6.6.3"
@@ -4951,13 +4945,6 @@ __metadata:
   version: 10.3.1
   resolution: "decimal.js@npm:10.3.1"
   checksum: fd218c68bb7960bbe4b68f477338726d6d9b6ba347ab0f12974f3b16305f5c4a88c601c9897ce6b0fe6d95cf7573d4aa1eb0c16134faf2375f9ab6f2ca515f6c
-  languageName: node
-  linkType: hard
-
-"decode-uri-component@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "decode-uri-component@npm:0.2.0"
-  checksum: 6944873192e84e58c4fd6483ce8846f2907b4ab1f0170a44bcc259fd976b7f6eecaad2016c9ada00a75155692b443f7970036c60a4d78853d0a0e2bec6f55ec8
   languageName: node
   linkType: hard
 
@@ -6586,15 +6573,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"history@npm:^5.2.0":
-  version: 5.3.0
-  resolution: "history@npm:5.3.0"
-  dependencies:
-    "@babel/runtime": "npm:^7.7.6"
-  checksum: 95f5983c15ce77b5e9aea74e604de4f99d2a165e1e743e58a21e202bd978c566444ab2bb914a1ede85cffa5ec91b4b5b8e46d37c8c79abe8810f554e8b84530f
-  languageName: node
-  linkType: hard
-
 "hoist-non-react-statics@npm:^3.0.0":
   version: 3.3.2
   resolution: "hoist-non-react-statics@npm:3.3.2"
@@ -6923,7 +6901,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"inherits@npm:2, inherits@npm:2.0.4, inherits@npm:^2.0.1, inherits@npm:^2.0.3, inherits@npm:^2.0.4, inherits@npm:~2.0.3":
+"inherits@npm:2, inherits@npm:2.0.4, inherits@npm:^2.0.1, inherits@npm:^2.0.3, inherits@npm:~2.0.3":
   version: 2.0.4
   resolution: "inherits@npm:2.0.4"
   checksum: ca76c7e45ec715bfe6c1dd67b780b9a15068f37b37ab56cf8b773537b2654238469a42950f5f4d301212755e7512be888f627752e778e1863d95cfedefc8b8bd
@@ -8642,20 +8620,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nikuman-pao-landing-page@workspace:."
   dependencies:
-    "@fortawesome/fontawesome-svg-core": "npm:^6.1.1"
-    "@fortawesome/free-regular-svg-icons": "npm:^6.1.1"
-    "@fortawesome/free-solid-svg-icons": "npm:^6.1.1"
-    "@fortawesome/react-fontawesome": "npm:^0.1.18"
-    "@testing-library/jest-dom": "npm:^5.11.4"
-    "@testing-library/react": "npm:^13.2.0"
-    "@testing-library/user-event": "npm:^14.2.0"
-    react: "npm:^18.1.0"
-    react-dom: "npm:^18.1.0"
-    react-router-dom: "npm:^6.3.0"
+    "@fortawesome/fontawesome-svg-core": "npm:^6.2.1"
+    "@fortawesome/free-regular-svg-icons": "npm:^6.2.1"
+    "@fortawesome/free-solid-svg-icons": "npm:^6.2.1"
+    "@fortawesome/react-fontawesome": "npm:^0.1.19"
+    "@testing-library/jest-dom": "npm:^5.16.5"
+    "@testing-library/react": "npm:^13.4.0"
+    "@testing-library/user-event": "npm:^14.4.3"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    react-router-dom: "npm:^6.4.3"
     react-scripts: "npm:^5.0.1"
-    react-scroll: "npm:^1.8.7"
-    styled-components: "npm:^5.3.3"
-    web-vitals: "npm:^2.1.4"
+    react-scroll: "npm:^1.8.8"
+    styled-components: "npm:^5.3.6"
+    web-vitals: "npm:^3.1.0"
   languageName: unknown
   linkType: soft
 
@@ -10281,15 +10259,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^18.1.0":
-  version: 18.1.0
-  resolution: "react-dom@npm:18.1.0"
+"react-dom@npm:^18.2.0":
+  version: 18.2.0
+  resolution: "react-dom@npm:18.2.0"
   dependencies:
     loose-envify: "npm:^1.1.0"
-    scheduler: "npm:^0.22.0"
+    scheduler: "npm:^0.23.0"
   peerDependencies:
-    react: ^18.1.0
-  checksum: b8fdbb33e5462064e8a923b58ba529490c25f8680e040acc18b295f200fa2179ba01e1c94779a84c1c2a1d87339057bf716b061e53bd76db25dbd5c5e5d2755e
+    react: ^18.2.0
+  checksum: 7c5b915fb793d63563cec1f721e059e6ff0e2855ac116ab5cb7450b6c59398f5e25f95c960ce5cb93504cc58ab724a75a78e99282354e702a0e667d0d787d028
   languageName: node
   linkType: hard
 
@@ -10328,27 +10306,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router-dom@npm:^6.3.0":
-  version: 6.3.0
-  resolution: "react-router-dom@npm:6.3.0"
+"react-router-dom@npm:^6.4.3":
+  version: 6.4.3
+  resolution: "react-router-dom@npm:6.4.3"
   dependencies:
-    history: "npm:^5.2.0"
-    react-router: "npm:6.3.0"
+    "@remix-run/router": "npm:1.0.3"
+    react-router: "npm:6.4.3"
   peerDependencies:
     react: ">=16.8"
     react-dom: ">=16.8"
-  checksum: 78051169fdc7642103479e7194f616cd1d316af8474503d5d3ea8125ed1d3ded2776e2653e8184509220349d3713ceca572cce3297266e2b7ab3dd0067db8605
+  checksum: e25a8e16ea87cbf8304c468ed946db2a5e23b84c4c75f18e30bfae32bd00e4c96c733526124051163fca8ceaccf725bba2ac5080868db7f3749e2d01de648a53
   languageName: node
   linkType: hard
 
-"react-router@npm:6.3.0":
-  version: 6.3.0
-  resolution: "react-router@npm:6.3.0"
+"react-router@npm:6.4.3":
+  version: 6.4.3
+  resolution: "react-router@npm:6.4.3"
   dependencies:
-    history: "npm:^5.2.0"
+    "@remix-run/router": "npm:1.0.3"
   peerDependencies:
     react: ">=16.8"
-  checksum: e18db7761282cb28dda7a4f81c4df696f0484c7f998dc339b4939cb9bb9e8d968e33b627a9616adfed141b588ca1885be6be602c12ff52e81b4bab4bf3e629f8
+  checksum: 1e1b962b02189d17eaaf5470649a6acb75b97298e99a8df530b753f28f2e64939746060e829f66c2538607b1477172734f46ebcbb8dcaf6a05eb8f53a8a60dd8
   languageName: node
   linkType: hard
 
@@ -10419,25 +10397,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-scroll@npm:^1.8.7":
-  version: 1.8.7
-  resolution: "react-scroll@npm:1.8.7"
+"react-scroll@npm:^1.8.8":
+  version: 1.8.8
+  resolution: "react-scroll@npm:1.8.8"
   dependencies:
     lodash.throttle: "npm:^4.1.1"
     prop-types: "npm:^15.7.2"
   peerDependencies:
     react: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
     react-dom: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
-  checksum: 2f7177645e272bc94f21ea35080e93a8c36fbfc12ce254bc9840afa2feaa97dc2e0f7c2acffa8486d0d743beb1444ce0e2f2c27cf8fb9b548bdda542b8bed080
+  checksum: bfdc3f476e23d7016191cd45578608b6cd5230ef05c26fc7eb27c3ff0044952ec02fabb7b72f08976e2273a7ba36af67167ce75665adb82c35dfe13a54c8ef3b
   languageName: node
   linkType: hard
 
-"react@npm:^18.1.0":
-  version: 18.1.0
-  resolution: "react@npm:18.1.0"
+"react@npm:^18.2.0":
+  version: 18.2.0
+  resolution: "react@npm:18.2.0"
   dependencies:
     loose-envify: "npm:^1.1.0"
-  checksum: 2ec5d96c4af7aaf531f92a61167ce433d2095bf041586b8eec4e2474ed7320b3977c762e46a778236de857619709e2547a9c3bb189b2d59faff4cf4968ad142a
+  checksum: 8434e5782c52b3bf18a80b666348977924ee3827895fa03ec3ffb9faca90c460049f14130428dd1546bab6cf3b2c277f2c243d3c2a856501331d2e69c24b2bb9
   languageName: node
   linkType: hard
 
@@ -10860,12 +10838,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scheduler@npm:^0.22.0":
-  version: 0.22.0
-  resolution: "scheduler@npm:0.22.0"
+"scheduler@npm:^0.23.0":
+  version: 0.23.0
+  resolution: "scheduler@npm:0.23.0"
   dependencies:
     loose-envify: "npm:^1.1.0"
-  checksum: de5e75075cf8de38e0dc0e04f834a4ac67e75481b72cacd56f57aff26bc4e4db46cc8388f646b25a39d32dde97780a13cc63f4e4727d61a496d49c639c8e527c
+  checksum: f4022b95cdc282668643da4850f55fe70c899aa956d11819f196e2ca892271bdb253613e53997852094f9351f7c72d057eea8b28d9b4bcb93bcb1c6d09985c82
   languageName: node
   linkType: hard
 
@@ -11181,16 +11159,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-resolve@npm:^0.6.0":
-  version: 0.6.0
-  resolution: "source-map-resolve@npm:0.6.0"
-  dependencies:
-    atob: "npm:^2.1.2"
-    decode-uri-component: "npm:^0.2.0"
-  checksum: ab19097f6518d5770321a794ce2f3d0cfe5617bb5bf3872a5c31c3d85646b985a54125a205650665a62802f14a52893f459086eaf9b778d1173992e846ca50de
-  languageName: node
-  linkType: hard
-
 "source-map-support@npm:^0.5.6, source-map-support@npm:~0.5.20":
   version: 0.5.21
   resolution: "source-map-support@npm:0.5.21"
@@ -11487,9 +11455,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"styled-components@npm:^5.3.3":
-  version: 5.3.5
-  resolution: "styled-components@npm:5.3.5"
+"styled-components@npm:^5.3.6":
+  version: 5.3.6
+  resolution: "styled-components@npm:5.3.6"
   dependencies:
     "@babel/helper-module-imports": "npm:^7.0.0"
     "@babel/traverse": "npm:^7.4.5"
@@ -11505,7 +11473,7 @@ __metadata:
     react: ">= 16.8.0"
     react-dom: ">= 16.8.0"
     react-is: ">= 16.8.0"
-  checksum: f74a33b2597ad9ddd6233ca2afccc9462a74daa8cb16a44b5e9ca2628e0966587be2f94a1376ef75d75db717faf5e8d042e1a0b2e2b6b7ce10116c26050342f5
+  checksum: bdbeb8f491267f8dca6ad01bdbb604b7a6b81e0da0f7cd30d03e4aa3f9a0b1958ec083bb783027756fcfe3ae51286ddf105867c70909930050bb7d23a01bc586
   languageName: node
   linkType: hard
 
@@ -12173,10 +12141,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-vitals@npm:^2.1.4":
-  version: 2.1.4
-  resolution: "web-vitals@npm:2.1.4"
-  checksum: 71a7e3a5786242d91b85acd6b420890cb76841f3dfa31fea910004bd33bf44a582685d7333185e1a8add608a45d227978dad7b5ade241025b4845212622a85d8
+"web-vitals@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "web-vitals@npm:3.1.0"
+  checksum: 5441514b96e821fa094413c427b1534e2c7d7b9eebb569d7709afac44f99fce7c570d66818ad39c86961a01fcc6d816daa5326fd4a80bef78c694192b5204635
   languageName: node
   linkType: hard
 
