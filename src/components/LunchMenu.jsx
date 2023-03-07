@@ -114,7 +114,7 @@ const LunchMenus = styled.div`
 
   ul {
     position: absolute;
-    bottom: 50px;
+    bottom: 60px;
     font-size: 18px;
     list-style: none;
     left: 15%;
@@ -160,10 +160,10 @@ const LunchMenu = () => {
           <h1>
             A<span>ランチ</span>
           </h1>
-          <LunchA height={"400px"} width={"350px"} alt="パオキャラクター" />
+          <LunchA height={"440px"} width={"350px"} alt="パオキャラクター" />
           <h2>肉まん</h2>
           <p>
-            290円の中から
+            350円の中から
             <br />
             お好きなもの2コ
           </p>
@@ -171,9 +171,10 @@ const LunchMenu = () => {
             <li>●中華風茶碗蒸し</li>
             <li>●日替わりスープ</li>
             <li>●サラダ</li>
+            <li>●デザート</li>
           </ul>
           <h3>
-            780<span>円</span>
+            930<span>円</span>
             <small>（税込）</small>
           </h3>
         </LunchMenus>
@@ -181,15 +182,16 @@ const LunchMenu = () => {
           <h1>
             B<span>ランチ</span>
           </h1>
-          <LunchB height={"400px"} width={"350px"} alt="パオキャラクター" />
+          <LunchB height={"440px"} width={"350px"} alt="パオキャラクター" />
           <h2 top={0}>麻婆丼</h2>
           <ul>
             <li>●中華風茶碗蒸し</li>
             <li>●日替わりスープ</li>
             <li>●サラダ</li>
+            <li>●デザート</li>
           </ul>
           <h3>
-            680<span>円</span>
+            930<span>円</span>
             <small>（税込）</small>
           </h3>
         </LunchMenus>
@@ -197,7 +199,7 @@ const LunchMenu = () => {
           <h1>
             C<span>ランチ</span>
           </h1>
-          <LunchC height={"400px"} width={"350px"} alt="パオキャラクター" />
+          <LunchC height={"440px"} width={"350px"} alt="パオキャラクター" />
           <h2>
             中華丼
             <br />
@@ -206,9 +208,10 @@ const LunchMenu = () => {
             <li>●中華風茶碗蒸し</li>
             <li>●日替わりスープ</li>
             <li>●サラダ</li>
+            <li>●デザート</li>
           </ul>
           <h3>
-            780<span>円</span>
+            930<span>円</span>
             <small>（税込）</small>
           </h3>
         </LunchMenus>
@@ -216,7 +219,7 @@ const LunchMenu = () => {
           <h1>
             D<span>ランチ</span>
           </h1>
-          <LunchD height={"400px"} width={"350px"} alt="パオキャラクター" />
+          <LunchD height={"440px"} width={"350px"} alt="パオキャラクター" />
           <h2>
             五目あんかけ <br />
             焼きそば
@@ -225,9 +228,10 @@ const LunchMenu = () => {
             <li>●中華風茶碗蒸し</li>
             <li>●日替わりスープ</li>
             <li>●サラダ</li>
+            <li>●デザート</li>
           </ul>
           <h3>
-            780<span>円</span>
+            930<span>円</span>
             <small>（税込）</small>
           </h3>
         </LunchMenus>

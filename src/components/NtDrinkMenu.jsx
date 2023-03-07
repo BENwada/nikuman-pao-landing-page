@@ -3,7 +3,6 @@ import { ReactComponent as AlcoholeH1 } from "../svg/alcoholH1.svg";
 import { ReactComponent as PaoCharAlc } from "../svg/paoCharAlc.svg";
 import { ReactComponent as Shaoxing5 } from "../svg/shaoxing5.svg";
 import { ReactComponent as Shaoxing15 } from "../svg/shaoxing15.svg";
-import Bubble from "../svg/bubble.svg";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -76,42 +75,25 @@ const SoftDrinks = styled.div`
   }
 `;
 
-const DRecommend = styled.li`
+const Tea = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+`;
+const Drink = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+`;
+const NoneAlcoal = styled.div`
+  display: flex;
   flex-direction: column;
-  align-self: flex-start;
-  justify-self: flex-start;
-  background-color: #ffe6c3;
-  padding: 10px;
-  margin: 10px 0px;
-  position: relative;
+`;
 
-  @media screen and (max-width: 450px) {
-    width: 100%;
-  }
-
-  ::before {
-    content: "おすすめ";
-    position: absolute;
-    top: 2px;
-    right: 10px;
-    z-index: 9;
-    color: white;
-  }
-
-  ::after {
-    content: url(${Bubble});
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    width: 90px;
-    z-index: 8;
-  }
-
-  .RPrice {
-    text-align: right;
-    line-height: 5px;
-    margin-bottom: 10px;
-  }
+const Horizon = styled.hr`
+  border-top: 2px solid #d0d0d0;
 `;
 
 const Alcohol = styled.div`
@@ -226,6 +208,20 @@ const DName = styled.h3`
     font-size: 18px;
     margin-left: -5px;
   }
+  h5 {
+    font-size: 16px;
+    margin-left: 10px;
+    color: #333;
+  }
+  .ICE {
+    color: #7373f1;
+    font-size: 16px;
+  }
+
+  .HOT {
+    color: #ff5656;
+    font-size: 16px;
+  }
 `;
 
 const DPrice = styled.h3`
@@ -252,70 +248,54 @@ const NtDrinkMenu = () => {
           <div className="DChara">
             <DrinkChar alt="パオキャラクター" />
           </div>
-          <ul className="drinks">
-            <li className="drink">
-              <DName className="dName">
-                ウーロン茶<span>（ICE）</span>
-              </DName>
-              <DPrice className="dPrice">
-                180
-                <span>
-                  円<small>（税込）</small>
-                </span>
-              </DPrice>
-            </li>
-            <li className="drink">
-              <DName className="dName">
-                コーヒー<span>（HOT）</span>
-              </DName>
-              <DPrice className="dPrice">
-                200
-                <span>
-                  円<small>（税込）</small>
-                </span>
-              </DPrice>
-            </li>
-            <DRecommend>
-              <p className="desc">厳選した茶葉の香り高い味わいを。</p>
-              <DName className="dName">
-                ジャスミン茶（グラス）
-                <br />
-                <span>（ICE・HOT）</span>
-              </DName>
-              <DPrice className="RPrice">
-                180
-                <span>
-                  円<small>（税込）</small>
-                </span>
-              </DPrice>
-            </DRecommend>
-            <li className="softDrink">
-              <DName className="dName">
-                ●オレンジ
-                <br />
-                ●リンゴ
-                <br />
-                ●コーラ
-              </DName>
-              <DPrice className="dPrice">
-                <span>各</span>180
-                <span>
-                  円<small>（税込）</small>
-                </span>
-              </DPrice>
-            </li>
-            <li className="noneAlcohol">
-              <DName className="dName">
-                ノンアルコールビール<span>（334ml）</span>
-              </DName>
-              <DPrice className="dPrice">
-                300
-                <span>
-                  円<small>（税込）</small>
-                </span>
-              </DPrice>
-            </li>
-          </ul>
+          <Tea>
+            <DName className="dName">
+              ●ジャスミン茶
+              <br />
+              ●ウーロン茶
+              <br />
+              ●コーヒー
+              <br />
+              <h5>
+                <span className="ICE">ICE</span>・
+                <span className="HOT">HOT</span>どちらでもOK!
+              </h5>
+            </DName>
+            <DPrice className="dPrice">
+              <span>各</span>250
+              <span>
+                円<small>（税込）</small>
+              </span>
+            </DPrice>
+          </Tea>
+          <Horizon />
+          <Drink>
+            <DName className="dName">
+              ●オレンジ
+              <br />
+              ●リンゴ
+              <br />
+              ●コーラ
+            </DName>
+            <DPrice className="dPrice">
+              <span>各</span>250
+              <span>
+                円<small>（税込）</small>
+              </span>
+            </DPrice>
+          </Drink>
+          <Horizon />
+          <NoneAlcoal>
+            <DName className="dName">
+              ノンアルコールビール<span>（334ml）</span>
+            </DName>
+            <DPrice className="dPrice">
+              300
+              <span>
+                円<small>（税込）</small>
+              </span>
+            </DPrice>
+          </NoneAlcoal>
         </SoftDrinks>
         <Alcohol>
           <h1>アルコールドリンク</h1>
@@ -329,7 +309,7 @@ const NtDrinkMenu = () => {
                 ビール<span>（中瓶・500ml）</span>
               </DName>
               <DPrice className="aPrice">
-                480
+                580
                 <span>
                   円<small>（税込）</small>
                 </span>

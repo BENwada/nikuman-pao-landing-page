@@ -127,8 +127,9 @@ const ContentWrapper = styled.div`
 `;
 
 const Description = styled.p`
-  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-family: "Zen-Kaku-Gothic New", sans-serif;
   font-size: 0.7em;
+  font-feature-settings: "palt";
 `;
 
 const MenuName = styled.h2`
