@@ -1,4 +1,4 @@
-import maBoNas from "../images/ma-bo-nas.webp";
+import ebitiri from "../images/ebitiri.webp";
 import maRaMen from "../images/ma-ra-men.webp";
 import yodaredori from "../images/yodaredori.webp";
 import ankakeyakisoba from "../images/ankakeyakisoba.webp";
@@ -194,31 +194,18 @@ const NtMenu = () => {
       </Title>
       <Wrapper>
         <Left>
-          <MenuImg width={750} ml={-170} src={maBoNas} alt="麻婆茄子" />
-          <Price className="ma-bo-nas">
-            <MenuName>
-              <ruby data-ruby="マーボーなす">
-                麻<rt>マー</rt>婆<rt>ボー</rt>茄<rt>な</rt>子<rt>す</rt>
-              </ruby>
-            </MenuName>
+          <MenuImg width={600} ml={-170} src={ebitiri} alt="エビチリ" />
+          <Price className="ebitiri">
+            <MenuName>エビチリ</MenuName>
             <MenuDesc>
-              <ruby data-ruby="てんめんじゃん">
-                甜麺醤<rt>てんめんじゃん</rt>
-              </ruby>
-              と
-              <ruby data-ruby="とうばんじゃん">
-                豆板醤<rt>とうばんじゃん</rt>
-              </ruby>
-              の特製ダレで
+              エビが大ぶりで
               <br />
-              甘辛く炒めました。
+              歯応えプリップリ！
             </MenuDesc>
             <Payment>
-              750
+              880
               <span>
-                <ruby data-ruby="（税込）">
-                  円<rt>（税込）</rt>
-                </ruby>
+                <ruby data-ruby="（税込）">円</ruby>
               </span>
             </Payment>
           </Price>
@@ -233,9 +220,7 @@ const NtMenu = () => {
           />
           <Price className="ma-ra-men">
             <MenuName>
-              <ruby data-ruby="マーラーミェン">
-                麻<rt>マー</rt>辣<rt>ラー</rt>麺<rt>ミェン</rt>
-              </ruby>
+              <ruby data-ruby="マーラーミェン">麻辣麺</ruby>
             </MenuName>
             <span className="hard">
               <h4>自家製手打ち麺</h4>
@@ -247,11 +232,9 @@ const NtMenu = () => {
               よくからみ、箸が止まらぬ旨さです！
             </MenuDesc>
             <Payment>
-              780
+              880
               <span>
-                <ruby data-ruby="（税込）">
-                  円<rt>（税込）</rt>
-                </ruby>
+                <ruby data-ruby="（税込）">円</ruby>
               </span>
             </Payment>
           </Price>
@@ -272,11 +255,9 @@ const NtMenu = () => {
               辛味ダレでどうぞ。
             </MenuDesc>
             <Payment>
-              580
+              680
               <span>
-                <ruby data-ruby="（税込）">
-                  円<rt>（税込）</rt>
-                </ruby>
+                <ruby data-ruby="（税込）">円</ruby>
               </span>
             </Payment>
           </Price>
@@ -301,11 +282,9 @@ const NtMenu = () => {
               野菜がたっぷり。シンプルな塩味で。
             </MenuDesc>
             <Payment>
-              880
+              980
               <span>
-                <ruby data-ruby="（税込）">
-                  円<rt>（税込）</rt>
-                </ruby>
+                <ruby data-ruby="（税込）">円</ruby>
               </span>
             </Payment>
           </Price>
