@@ -214,21 +214,20 @@ const Speech = styled.p`
 `;
 
 const MenuInfo = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 100%;
   display: flex;
+  gap: 10px;
   justify-content: center;
   align-items: flex-end;
   background-color: white;
 `;
 
 const PandaCharacter = styled.div`
-  flex: 1;
-  display: flex;
-  justify-content: flex-start;
+  margin-left: 20px;
 `;
 const CharacterImg = styled.img`
-  height: 300px;
+  height: 200px;
 
   @media screen and (max-width: 780px) {
     height: 120px;

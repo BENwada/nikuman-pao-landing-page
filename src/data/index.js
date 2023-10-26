@@ -3,7 +3,7 @@ import ImageTwo from "../images/gomokuman.webp";
 import ImageThree from "../images/mara-man.webp";
 import ImageFour from "../images/tamanegiman.webp";
 import ImageFive from "../images/kiriboshi.webp";
-import ImageSix from "../images/sausage.webp";
+import ImageSix from "../images/cheeseman.webp";
 import ImageSeven from "../images/anko.webp";
 import ImageEight from "../images/roastedPorkFillet.webp";
 import ImageNine from "../images/ShrimpChili.webp";
@@ -72,14 +72,14 @@ export const MenuData = [
   },
   {
     id: "6",
-    name: "ソーセージまん",
+    name: "チーズまん",
     price: "350",
     recommendation: "off",
     hard: "off",
     image: ImageSix,
-    descriptionLine1: "ホットドッグ感覚で",
-    descriptionLine2: "ガブリとどうぞ！",
-    alt: "ソーセージまん",
+    descriptionLine1: "どこを食べてもチーズ！",
+    descriptionLine2: "チーズ！チーズ！",
+    alt: "チーズまん",
   },
   {
     id: "7",
