@@ -11,6 +11,11 @@ import ImageTen from "../images/SweetAndSourPork.webp";
 import ImageEleven from "../images/ebiabokadoba-ga-.webp";
 import ImageTwelve from "../images/koumitoriba-ga-.webp";
 import ImageThirteen from "../images/tamagoba-ga-.webp";
+import LunchNikuman from "../images/lunch-nikuman.webp";
+import LunchYakisoba from "../images/lunch-yakisoba.webp";
+import LunchChukadon from "../images/lunch-chukadon.webp";
+import LunchAnkakemen from "../images/lunch-ankakemen.webp";
+import LunchRebanira from "../images/lunch-rebanira.webp";
 
 export const MenuData = [
   {
@@ -180,5 +185,48 @@ export const ExclusiveMenuData = [
     descriptionLine1: "卵と生地の",
     descriptionLine2: "相性バツグン！",
     alt: "たまごバーガー",
+  },
+];
+
+export const LunchMenuData = [
+  {
+    id: "1",
+    name: "肉まん(2個)セット",
+    price: "980",
+    tax: "(税込)",
+    img: LunchNikuman,
+    setContents: ["日替わりサラダ", "日替わりスープ", "デザート"],
+  },
+  {
+    id: "2",
+    name: "あんかけ焼きそばセット",
+    price: "980",
+    tax: "(税込)",
+    img: LunchYakisoba,
+    setContents: ["日替わりサラダ", "日替わりスープ", "デザート"],
+  },
+  {
+    id: "3",
+    name: "中華丼セット",
+    price: "980",
+    tax: "(税込)",
+    img: LunchChukadon,
+    setContents: ["日替わりサラダ", "日替わりスープ", "デザート"],
+  },
+  {
+    id: "4",
+    name: "五目あんかけ麺セット",
+    price: "1,180",
+    tax: "(税込)",
+    img: LunchAnkakemen,
+    setContents: ["小籠包2個", "デザート"],
+  },
+  {
+    id: "5",
+    name: "レバニラ炒めセット",
+    price: "1,180",
+    tax: "(税込)",
+    img: LunchRebanira,
+    setContents: ["日替わりサラダ", "日替わりスープ", "ごはん", "デザート"],
   },
 ];

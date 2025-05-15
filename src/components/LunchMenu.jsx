@@ -1,9 +1,5 @@
-import React from "react";
 import styled from "styled-components";
-import { ReactComponent as LunchA } from "../svg/lunchA.svg";
-import { ReactComponent as LunchB } from "../svg/lunchB.svg";
-import { ReactComponent as LunchC } from "../svg/lunchC.svg";
-import { ReactComponent as LunchD } from "../svg/lunchD.svg";
+import { LunchMenuData } from "../data";
 
 const Container = styled.div`
   width: 100vw;
@@ -14,10 +10,11 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 5px;
 
   @media screen and (max-width: 480px) {
     font-size: 9px;
-  } ;
+  }
 `;
 
 const Title = styled.div`
@@ -28,7 +25,7 @@ const Title = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
+  padding: 40px;
 
   h1 {
     font-size: 5.5em;
@@ -53,7 +50,7 @@ const Title = styled.div`
     br {
       display: none;
     }
-  } ;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -61,84 +58,88 @@ const Wrapper = styled.div`
   max-width: 1000px;
   background-color: white;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column
+  gap: 20px;
+
+  @media screen and (max-width: 780px) {
+  padding: 10px 0;
+  }
 `;
 
 const LunchMenus = styled.div`
-  margin: 20px;
-  position: relative;
+  display: flex;
+  // flex-direction: ${(props) => (props.id % 2 !== 0 ? "row-reverse" : "row")};
+
+  @media screen and (max-width: 780px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+const LunchMenuImage = styled.div`
+  width: 100%;
+  height: 100%;
+  flex: 2;
+  padding: -20px 0;
+
+  img {
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+  }
+  justify-content: center;
+`;
+
+const LunchMenuContent = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
 
   h1 {
-    font-family: "Zen Kaku Gothic New", sans-serif;
-    position: absolute;
-    top: 13px;
-    left: 145px;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 40px;
-    display: flex;
-    align-items: center;
-    color: white;
-
+    color: black;
+    font-feature-settings: "palt";
     span {
       font-size: 23px;
     }
   }
-  h2 {
-    width: 100%;
-    font-family: "Zen Kaku Gothic New", sans-serif;
-    position: absolute;
-    font-size: 50px;
-    line-height: 53px;
-    top: ${({ top }) => top}px;
-    left: ${({ left }) => left}px;
-    font-weight: 800;
-    transform: scaleX(${({ scalex }) => scalex});
-    text-align: center;
-  }
-
-  p {
-    font-family: "Zen Kaku Gothic New", sans-serif;
-    position: absolute;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 22px;
-    top: 200px;
-    left: 50%;
-    text-align: center;
-    color: orange;
-    transform: translateX(-50%);
-  }
-
   ul {
-    position: absolute;
-    bottom: 60px;
     font-size: 18px;
     list-style: none;
     left: 15%;
 
     li {
       font-family: "Zen Kaku Gothic New", sans-serif;
-      font-weight: 600;
+      font-weight: 500;
     }
   }
+
   h3 {
-    font-family: "Zen Kaku Gothic New", sans-serif;
-    position: absolute;
-    font-size: 50px;
-    right: 15px;
-    bottom: 15px;
+    font-size: 2rem;
 
     span {
       font-family: "Zen Kaku Gothic New", sans-serif;
-      font-size: 25px;
+      font-size: 20px;
     }
     small {
       font-family: "Zen Kaku Gothic New", sans-serif;
       font-size: 25px;
-      margin-left: -10px;
+    }
+  }
+  @media screen and (max-width: 780px) {
+    h1 {
+      font-size: 3em;
+      color: black;
+      font-feature-settings: "palt";
+    }
+    div {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
     }
   }
 `;
@@ -151,91 +152,34 @@ const LunchMenu = () => {
         <h2>
           水曜〜金曜
           <br />
-          <small> AM</small>11:00〜<small>PM</small>15:00
+          <small> AM</small>11:00〜<small>PM</small>14:30
         </h2>
-        <p>※土・日・祝はランチお休みとなります。</p>
+        <p>※土・日・祝はランチメニューはお休みさせていただきます。</p>
       </Title>
-      <Wrapper>
-        <LunchMenus top={140} left={6}>
-          <h1>
-            A<span>ランチ</span>
-          </h1>
-          <LunchA height={"440px"} width={"350px"} alt="パオキャラクター" />
-          <h2>肉まん</h2>
-          <p>
-            350円の中から
-            <br />
-            お好きなもの2コ
-          </p>
-          <ul>
-            <li>●中華風茶碗蒸し</li>
-            <li>●日替わりスープ</li>
-            <li>●サラダ</li>
-            <li>●デザート</li>
-          </ul>
-          <h3>
-            930<span>円</span>
-            <small>（税込）</small>
-          </h3>
-        </LunchMenus>
-        <LunchMenus top={165} left={6}>
-          <h1>
-            B<span>ランチ</span>
-          </h1>
-          <LunchB height={"440px"} width={"350px"} alt="パオキャラクター" />
-          <h2 top={0}>麻婆丼</h2>
-          <ul>
-            <li>●中華風茶碗蒸し</li>
-            <li>●日替わりスープ</li>
-            <li>●サラダ</li>
-            <li>●デザート</li>
-          </ul>
-          <h3>
-            930<span>円</span>
-            <small>（税込）</small>
-          </h3>
-        </LunchMenus>
-        <LunchMenus top={165} left={6}>
-          <h1>
-            C<span>ランチ</span>
-          </h1>
-          <LunchC height={"440px"} width={"350px"} alt="パオキャラクター" />
-          <h2>
-            中華丼
-            <br />
-          </h2>
-          <ul>
-            <li>●中華風茶碗蒸し</li>
-            <li>●日替わりスープ</li>
-            <li>●サラダ</li>
-            <li>●デザート</li>
-          </ul>
-          <h3>
-            930<span>円</span>
-            <small>（税込）</small>
-          </h3>
-        </LunchMenus>
-        <LunchMenus top={138} left={8} scalex={0.8}>
-          <h1>
-            D<span>ランチ</span>
-          </h1>
-          <LunchD height={"440px"} width={"350px"} alt="パオキャラクター" />
-          <h2>
-            五目あんかけ <br />
-            焼きそば
-          </h2>
-          <ul>
-            <li>●中華風茶碗蒸し</li>
-            <li>●日替わりスープ</li>
-            <li>●サラダ</li>
-            <li>●デザート</li>
-          </ul>
-          <h3>
-            930<span>円</span>
-            <small>（税込）</small>
-          </h3>
-        </LunchMenus>
-      </Wrapper>
+      {LunchMenuData.map((item) => (
+        <Wrapper key={item.id}>
+          <LunchMenus id={item.id}>
+            <LunchMenuImage>
+              <img src={item.img} alt={item.name} />
+            </LunchMenuImage>
+            <LunchMenuContent>
+              <h1>{item.name}</h1>
+              <div>
+                <ul>
+                  {item.setContents.map((content) => (
+                    <li key={content}>●{content}</li>
+                  ))}
+                </ul>
+                <h3>
+                  {item.price}
+                  <small>円</small>
+                  <span>{item.tax}</span>
+                </h3>
+              </div>
+            </LunchMenuContent>
+          </LunchMenus>
+        </Wrapper>
+      ))}
     </Container>
   );
 };
