@@ -10,7 +10,6 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5px;
 
   @media screen and (max-width: 480px) {
     font-size: 9px;
